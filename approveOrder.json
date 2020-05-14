@@ -1,0 +1,21 @@
+  {
+             "approvalInfo":
+                    {
+                    "approvalType":"Standard",
+                "approver":[{
+                "approvalStatus":"APPROVED",
+                "approvedBy":"cloud.brokertest@gmail.com",
+                "approvedTime":"2018-02-02 08:34:29",
+                "approvedTs":"2018-02-02 08:34:29",
+                "type":"technical"},
+                {
+                "approvalStatus":"APPROVED",
+                "approvedBy":"cloud.brokertest@gmail.com",
+                 "approvedTime":"2018-02-02 08:34:29",
+                "approvedTs":"2018-02-02 08:34:29",
+                "type":"financial"
+            }],
+            "externalApprovalResponse":null
+                        },
+            "orderNumber": "test"
+        }

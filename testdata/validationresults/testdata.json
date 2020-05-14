@@ -1,0 +1,330 @@
+{
+    "post_validationresults_payload": {
+      "validation_results": {
+        "account": {
+          "basicInfo": [
+            {
+              "name": "name-validation11",
+              "status": {
+                "message": "success",
+                "translationcode": "200"
+              },
+              "reason": {
+                "message": "NA",
+                "translationcode": "code",
+                "translationparams": [
+                  
+                ]
+              }
+            },
+            {
+              "name": "serviceProvType-validation11",
+              "status": {
+                "message": "success",
+                "translationcode": "200"
+              },
+              "reason": {
+                "message": "NA",
+                "translationcode": "code",
+                "translationparams": [
+                  
+                ]
+              }
+            },
+            {
+              "name": "accountType-validation11",
+              "status": {
+                "message": "success",
+                "translationcode": "200"
+              },
+              "reason": {
+                "message": "NA",
+                "translationcode": "code",
+                "translationparams": [
+                  
+                ]
+              }
+            }
+          ],
+          "advancedInfo": [
+            {
+              "name": "validation1",
+              "status": {
+                "message": "success",
+                "translationcode": "200"
+              },
+              "reason": {
+                "message": "NA",
+                "translationcode": "code",
+                "translationparams": [
+                  
+                ]
+              }
+            },
+            {
+              "name": "validation2",
+              "status": {
+                "message": "success",
+                "translationcode": "code"
+              },
+              "reason": {
+                "message": "NA",
+                "translationcode": "200",
+                "translationparams": [
+                  
+                ]
+              }
+            },
+            {
+              "name": "validation3",
+              "status": {
+                "message": "success",
+                "translationcode": "200"
+              },
+              "reason": {
+                "message": "NA",
+                "translationcode": "code",
+                "translationparams": [
+                  
+                ]
+              }
+            }
+          ],
+          "validation_count": {
+            "passed": "1",
+            "failed": "1",
+            "unknown": "1",
+            "total": "3"
+          }
+        }
+      }
+    },
+    "put_validationresults_payload": {
+      "account": {
+        "basicInfo": [
+          {
+            "name": "name-validation11",
+            "status": {
+              "message": "success",
+              "translationcode": "200"
+            },
+            "reason": {
+              "message": "NA",
+              "translationcode": "code",
+              "translationparams": [
+                
+              ]
+            }
+          },
+          {
+            "name": "serviceProvType-validation11",
+            "status": {
+              "message": "success",
+              "translationcode": "200"
+            },
+            "reason": {
+              "message": "NA",
+              "translationcode": "code",
+              "translationparams": [
+                
+              ]
+            }
+          },
+          {
+            "name": "accountType-validation11",
+            "status": {
+              "message": "success",
+              "translationcode": "200"
+            },
+            "reason": {
+              "message": "NA",
+              "translationcode": "code",
+              "translationparams": [
+                
+              ]
+            }
+          }
+        ],
+        "advancedInfo": [
+          {
+            "name": "validation1",
+            "status": {
+              "message": "success",
+              "translationcode": "200"
+            },
+            "reason": {
+              "message": "NA",
+              "translationcode": "code",
+              "translationparams": [
+                
+              ]
+            }
+          },
+          {
+            "name": "validation2",
+            "status": {
+              "message": "success",
+              "translationcode": "code"
+            },
+            "reason": {
+              "message": "NA",
+              "translationcode": "200",
+              "translationparams": [
+                
+              ]
+            }
+          },
+          {
+            "name": "validation3",
+            "status": {
+              "message": "success",
+              "translationcode": "200"
+            },
+            "reason": {
+              "message": "NA",
+              "translationcode": "code",
+              "translationparams": [
+                
+              ]
+            }
+          }
+        ],
+        "validation_count": {
+          "passed": "1",
+          "failed": "1",
+          "unknown": "1",
+          "total": "3"
+        }
+      }
+    },
+    "patch_validationresults_payload": {
+      "validation_results": {
+        "account": {
+          "basicInfo": [
+            {
+              "name": "name-validation11",
+              "status": {
+                "message": "success",
+                "translationcode": "200"
+              },
+              "reason": {
+                "message": "NA",
+                "translationcode": "code",
+                "translationparams": [
+                  
+                ]
+              }
+            },
+            {
+              "name": "serviceProvType-validation11",
+              "status": {
+                "message": "success",
+                "translationcode": "200"
+              },
+              "reason": {
+                "message": "NA",
+                "translationcode": "code",
+                "translationparams": [
+                  
+                ]
+              }
+            },
+            {
+              "name": "accountType-validation11",
+              "status": {
+                "message": "success",
+                "translationcode": "200"
+              },
+              "reason": {
+                "message": "NA",
+                "translationcode": "code",
+                "translationparams": [
+                  
+                ]
+              }
+            }
+          ],
+          "advancedInfo": [
+            {
+              "name": "validation1",
+              "status": {
+                "message": "success",
+                "translationcode": "200"
+              },
+              "reason": {
+                "message": "NA",
+                "translationcode": "code",
+                "translationparams": [
+                  
+                ]
+              }
+            },
+            {
+              "name": "validation2",
+              "status": {
+                "message": "success",
+                "translationcode": "code"
+              },
+              "reason": {
+                "message": "NA",
+                "translationcode": "200",
+                "translationparams": [
+                  
+                ]
+              }
+            },
+            {
+              "name": "validation3",
+              "status": {
+                "message": "success",
+                "translationcode": "200"
+              },
+              "reason": {
+                "message": "NA",
+                "translationcode": "code",
+                "translationparams": [
+                  
+                ]
+              }
+            }
+          ],
+          "validation_count": {
+            "passed": "1",
+            "failed": "1",
+            "unknown": "1",
+            "total": "3"
+          }
+        }
+      }
+    },
+    "post_validationresult_err" : {
+        "message": "Error in creating validation result ",
+        "statusCode": 500,
+        "translateCode": "CO500_ERROR_CREATING_VAL_RES",
+        "translateParameters": ["Error in creating validation result "]
+    },
+    "get_by_id_fail" : {
+      "message": "Get validationResultById Failed, Unable to find the validation result document with id: 9f7b800f-0b6b-4e32-8fda-6384678bdca5-TestId-To-Check",
+      "statusCode": 404,
+      "translateCode": "CO404_GET_VALRESBYID_FAILED",
+      "translateParameters": ["9f7b800f-0b6b-4e32-8fda-6384678bdca5-TestId-To-Check"]
+      },
+    "update_validation_result_success" : {
+      "message": "Updating of validation results success",
+      "statusCode": 200,
+      "translateCode": "CO200_VALIDATIONRESULTS_UPDATED",
+      "translateParameters": []
+      },
+    "patch_validation_result_success" : {
+      "message": "Updation of validation results success",
+      "statusCode": 200,
+      "translateCode": "CO200_VALIDATIONRESULTS_UPDATED",
+      "translateParameters": []
+      },
+    "post_validation_result_success" : {
+      "message": "Storing of validation results success",
+      "statusCode": 200,
+      "translateCode": "CO200_VALIDATIONRESULTS_STORED",
+      "translateParameters": []
+      }
+  }

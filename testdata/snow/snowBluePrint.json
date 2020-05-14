@@ -1,0 +1,37 @@
+{
+   "providerCode":"snow",
+   "serviceOfferingId":"CB_SNOW_ATTACH_7198552237b1300054b6a3549dbe5dea",
+   "providerAccountRefId":"ce00c517-b814-431b-a0f0-e1005de69104",
+   "providerCredentialRefId":"d6c8f1ed-82f1-48a9-86ef-e1d67be0960d",
+   "serviceInstancePrefix":"lkjadslkj",
+   "quantity":1,
+   "context":[
+      {
+         "tagValueCode":"org1",
+         "tagType":"org"
+      },
+      {
+         "tagValueCode":"MYTEAM",
+         "tagType":"team"
+      }
+   ],
+   "configGroups":[
+      {
+         "configGroupCode":"AdobeAcrobat",
+         "sections":[
+
+         ],
+         "configs":[
+            {
+               "configId":"qty",
+               "selectedValues":[
+                  {
+                     "label":"1",
+                     "valueId":"1"
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

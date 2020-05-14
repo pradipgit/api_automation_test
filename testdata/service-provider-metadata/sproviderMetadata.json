@@ -1,0 +1,1726 @@
+{
+	"amazon": {
+		"providerType": "amazon",
+		"displayName": "Amazon",
+		"iconImage": "path of icon for this provider",
+		"canSupportSubAccounts": true,
+		"canDiscoverSubAccounts": false,
+		"canDetachSubAccounts": false,
+		"canDoTestConnection": true,
+		"version": 1,
+		"accountMetadata": {
+			"accountNumber": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 250,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Account Number",
+				"helpText": "Add Account Number",
+				"translationCodes": {
+					"displayLabel": "CO_ACCOUNT_NUMBER",
+					"helpText": "CO_ADD_ACCOUNT_NUMBER"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": true
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				],
+				"displayOrder": 1
+			},
+			"s3Bucket": {
+				"type": "string",
+				"canUpdate": true,
+				"minLength": 3,
+				"maxLength": 200,
+				"regex": "",
+				"displayLabel": "S3 Bucket",
+				"helpText": "Enter S3 Bucket for storing Cost and Usage Reports",
+				"translationCodes": {
+					"displayLabel": "CO_S3_BUCKET",
+					"helpText": "CO_ENTER_S3_BUCKET_FOR_COST_USAGE_REPORT"
+				},
+				"appliesTo": [{
+					"accountType": "billing",
+					"isRequired": true
+				}],
+				"displayOrder": 2
+			}
+		},
+		"credentialMetadata": {
+			"costIngestion": {
+				"accessKey": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 200,
+					"isRequired": true,
+					"displayLabel": "Access Key ID",
+					"helpText": "Enter Access Key ID",
+					"translationCodes": {
+						"displayLabel": "CO_ACCESS_KEY_ID",
+						"helpText": "CO_ENTER_ACCESS_KEY_ID"
+					},
+					"displayOrder": 3
+				},
+				"secretKey": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 200,
+					"isRequired": true,
+					"displayLabel": "Secret Access Key",
+					"helpText": "Enter Secret Access Key",
+					"translationCodes": {
+						"displayLabel": "CO_SECRET_ACCESS_KEY",
+						"helpText": "CO_ENTER_SECRET_ACCESS_KEY"
+					},
+					"displayOrder": 4
+				},
+				"additionalInfo": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 250,
+					"isRequired": false,
+					"displayLabel": "Additional Info",
+					"helpText": "Enter Additional Info"
+				}
+			},
+			"provisioning": {
+				"accessKey": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 8,
+					"maxLength": 200,
+					"isRequired": true,
+					"displayLabel": "AccessKey ID",
+					"helpText": "Add Access Key ID",
+					"translationCodes": {
+						"displayLabel": "CO_ACCESS_KEY_ID",
+						"helpText": "CO_ADD_ACCESS_KEY_ID"
+					},
+					"displayOrder": 5
+				},
+				"secretKey": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 8,
+					"maxLength": 200,
+					"isRequired": true,
+					"displayLabel": "Secret Access Key",
+					"helpText": "Add Secret Access Key",
+					"translationCodes": {
+						"displayLabel": "CO_SECRET_ACCESS_KEY",
+						"helpText": "CO_ENTER_SECRET_ACCESS_KEY"
+					},
+					"displayOrder": 6
+				},
+				"additionalInfo": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 250,
+					"isRequired": false,
+					"displayLabel": "Additional Info",
+					"helpText": "Enter Additional Info"
+				}
+			},
+			"assetIngestion": {
+				"accessKey": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 8,
+					"maxLength": 200,
+					"isRequired": true,
+					"displayLabel": "AccessKey ID",
+					"helpText": "Add Access Key ID",
+					"translationCodes": {
+						"displayLabel": "CO_ACCESSKEY_ID",
+						"helpText": "CO_ADD_ACCESS_KEY_ID"
+					},
+					"displayOrder": 7
+				},
+				"secretKey": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 8,
+					"maxLength": 200,
+					"isRequired": true,
+					"displayLabel": "Secret Access Key",
+					"helpText": "Add Secret Access Key",
+					"translationCodes": {
+						"displayLabel": "CO_SECRET_ACCESS_KEY",
+						"helpText": "CO_ENTER_SECRET_ACCESS_KEY"
+					},
+					"displayOrder": 8
+				},
+				"additionalInfo": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 250,
+					"isRequired": false,
+					"displayLabel": "Additional Info",
+					"helpText": "Enter Additional Info"
+				}
+			}
+		},
+		"credentialAdvancedMetadata": {
+			"delegatedAccess": {
+				"type": "string",
+				"canUpdate": true,
+				"minLength": 5,
+				"maxLength": 1000,
+				"isRequired": false,
+				"displayLabel": "Delegated Access",
+				"helpText": "Provide ARN",
+				"translationCodes": {
+					"displayLabel": "CO_DELEGATED_ACCESS",
+					"helpText": "CO_PROVIDE_ARN"
+				}
+			}
+		}
+	},
+	"aws": {
+		"providerType": "aws",
+		"displayName": "AWS",
+		"iconImage": "path of icon for this provider",
+		"canSupportSubAccounts": true,
+		"canDiscoverSubAccounts": false,
+		"canDetachSubAccounts": false,
+		"canDoTestConnection": true,
+		"version": 1,
+		"accountMetadata": {
+			"accountNumber": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 250,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Account Number",
+				"helpText": "Add Account Number",
+				"translationCodes": {
+					"displayLabel": "CO_ACCOUNT_NUMBER",
+					"helpText": "CO_ADD_ACCOUNT_NUMBER"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": true
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				],
+				"displayOrder": 1
+			},
+			"s3Bucket": {
+				"type": "string",
+				"canUpdate": true,
+				"minLength": 3,
+				"maxLength": 200,
+				"regex": "",
+				"displayLabel": "S3 Bucket",
+				"helpText": "Enter S3 Bucket for storing Cost and Usage Reports",
+				"translationCodes": {
+					"displayLabel": "CO_S3_BUCKET",
+					"helpText": "CO_ENTER_S3_BUCKET_FOR_COST_USAGE_REPORT"
+				},
+				"appliesTo": [{
+					"accountType": "billing",
+					"isRequired": true
+				}],
+				"displayOrder": 2
+			}
+		},
+		"credentialMetadata": {
+			"costIngestion": {
+				"accessKey": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 200,
+					"isRequired": true,
+					"displayLabel": "Access Key ID",
+					"helpText": "Enter Access Key ID",
+					"translationCodes": {
+						"displayLabel": "CO_ACCESS_KEY_ID",
+						"helpText": "CO_ENTER_ACCESS_KEY_ID"
+					},
+					"displayOrder": 3
+				},
+				"secretKey": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 200,
+					"isRequired": true,
+					"displayLabel": "Secret Access Key",
+					"helpText": "Enter Secret Access Key",
+					"translationCodes": {
+						"displayLabel": "CO_SECRET_ACCESS_KEY",
+						"helpText": "CO_ENTER_SECRET_ACCESS_KEY"
+					},
+					"displayOrder": 4
+				},
+				"additionalInfo": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 250,
+					"isRequired": false,
+					"displayLabel": "Additional Info",
+					"helpText": "Enter Additional Info"
+				}
+			},
+			"provisioning": {
+				"accessKey": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 8,
+					"maxLength": 200,
+					"isRequired": true,
+					"displayLabel": "AccessKey ID",
+					"helpText": "Add Access Key ID",
+					"translationCodes": {
+						"displayLabel": "CO_ACCESS_KEY_ID",
+						"helpText": "CO_ADD_ACCESS_KEY_ID"
+					},
+					"displayOrder": 5
+				},
+				"secretKey": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 8,
+					"maxLength": 200,
+					"isRequired": true,
+					"displayLabel": "Secret Access Key",
+					"helpText": "Add Secret Access Key",
+					"translationCodes": {
+						"displayLabel": "CO_SECRET_ACCESS_KEY",
+						"helpText": "CO_ENTER_SECRET_ACCESS_KEY"
+					},
+					"displayOrder": 6
+				},
+				"additionalInfo": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 250,
+					"isRequired": false,
+					"displayLabel": "Additional Info",
+					"helpText": "Enter Additional Info"
+				}
+			},
+			"assetIngestion": {
+				"accessKey": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 8,
+					"maxLength": 200,
+					"isRequired": true,
+					"displayLabel": "AccessKey ID",
+					"helpText": "Add Access Key ID",
+					"translationCodes": {
+						"displayLabel": "CO_ACCESSKEY_ID",
+						"helpText": "CO_ADD_ACCESS_KEY_ID"
+					},
+					"displayOrder": 7
+				},
+				"secretKey": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 8,
+					"maxLength": 200,
+					"isRequired": true,
+					"displayLabel": "Secret Access Key",
+					"helpText": "Add Secret Access Key",
+					"translationCodes": {
+						"displayLabel": "CO_SECRET_ACCESS_KEY",
+						"helpText": "CO_ENTER_SECRET_ACCESS_KEY"
+					},
+					"displayOrder": 8
+				},
+				"additionalInfo": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 250,
+					"isRequired": false,
+					"displayLabel": "Additional Info",
+					"helpText": "Enter Additional Info"
+				}
+			}
+		},
+		"credentialAdvancedMetadata": {
+			"delegatedAccess": {
+				"type": "string",
+				"canUpdate": true,
+				"minLength": 5,
+				"maxLength": 1000,
+				"isRequired": false,
+				"displayLabel": "Delegated Access",
+				"helpText": "Provide ARN",
+				"translationCodes": {
+					"displayLabel": "CO_DELEGATED_ACCESS",
+					"helpText": "CO_PROVIDE_ARN"
+
+				}
+			}
+		}
+	},
+	"azure": {
+		"providerType": "azure",
+		"displayName": "Azure",
+		"canSupportSubAccounts": true,
+		"canDiscoverSubAccounts": false,
+		"canDetachSubAccounts": false,
+		"canDoTestConnection": true,
+		"version": 1,
+		"accountMetadata": {
+			"subscriptionID": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 250,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Subscription ID",
+				"helpText": "Add Subscription ID here",
+				"message": "Add Subscription ID here",
+				"translateCode": "CO_ADD_SUBSCRIPTION_ID",
+				"translationCodes": {
+					"displayLabel": "CO_SECRET_ACCESS_KEY",
+					"helpText": "CO_ENTER_SECRET_ACCESS_KEY"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": false
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				],
+				"displayOrder": 1
+			},
+			"offerID": {
+				"type": "string",
+				"minLength": 5,
+				"maxLength": 100,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Offer ID",
+				"helpText": "Add Offer ID here. Leave it blank for CSP account",
+				"message": "Add Offer ID here. Leave it blank for CSP account",
+				"translateCode": "CO_ADD_OFFER_ID",
+				"translationCodes": {
+					"displayLabel": "CO_SECRET_ACCESS_KEY",
+					"helpText": "CO_ENTER_SECRET_ACCESS_KEY"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": false
+					},
+					{
+						"accountType": "asset",
+						"isRequired": false
+					},
+					{
+						"accountType": "system",
+						"isRequired": false
+					}
+				],
+				"displayOrder": 2
+			},
+			"tenantID": {
+				"type": "string",
+				"minLength": 5,
+				"maxLength": 100,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Tenant ID",
+				"helpText": "Add Tenant ID / Domain here",
+				"translationCodes": {
+					"displayLabel": "CO_TENANT_ID",
+					"helpText": "CO_ADD_TENANT_ID"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": false
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				],
+				"displayOrder": 3
+			},
+			"flavour": {
+				"type": "string",
+				"minLength": 2,
+				"maxLength": 30,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Flavour",
+				"helpText": "Add Flavour of the account (pay_as_you_go, ea or csp). Is required for 'csp'",
+				"translationCodes": {
+					"displayLabel": "CO_FLAVOUR",
+					"helpText": "CO_ADD_ACCOUNT_FLAVOUR_FOR_CSP"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": false
+					},
+					{
+						"accountType": "asset",
+						"isRequired": false
+					},
+					{
+						"accountType": "system",
+						"isRequired": false
+					}
+				],
+				"displayOrder": 4
+			}
+		},
+		"credentialMetadata": {
+			"costIngestion": {
+				"billingAccountNumber": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": true,
+					"displayLabel": "Account Number",
+					"helpText": "Billing Account Number for which Bill is to be generated.",
+					"translationCodes": {
+						"displayLabel": "CO_ACCOUNT_NUMBER",
+						"helpText": "CO_ADD_BILLING_ACCOUNT_NUMBER"
+					},
+					"displayOrder": 5
+				},
+				"billingApiKey": {
+					"type": "multistring",
+					"canUpdate": true,
+					"minLength": 10,
+					"maxLength": 6000,
+					"isRequired": true,
+					"displayLabel": "API Key",
+					"helpText": "API Key required to access the Billing Account.",
+					"translationCodes": {
+						"displayLabel": "CO_API_KEY",
+						"helpText": "CO_ADD_API_KEY_FOR_BILLING_ACCOUNT"
+					},
+					"displayOrder": 6
+				}
+			},
+			"assetIngestion": {
+				"clientId": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": true,
+					"displayLabel": "Client ID",
+					"helpText": "Add Client ID / Application ID",
+					"translationCodes": {
+						"displayLabel": "CO_CLIENTID",
+						"helpText": "CO_ADD_CLIENTID"
+					},
+					"displayOrder": 7
+				},
+				"secret": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": true,
+					"displayLabel": "Secret Key",
+					"helpText": "Add Secret Key / Password required to access the Account",
+					"translationCodes": {
+						"displayLabel": "CO_SECRET_KEY",
+						"helpText": "CO_ADD_SECRET_KEY"
+					},
+					"displayOrder": 8
+				}
+			},
+			"provisioning": {
+				"clientId": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": true,
+					"displayLabel": "Client ID",
+					"helpText": "Add Client ID / Application ID",
+					"translationCodes": {
+						"displayLabel": "CO_CLIENTID",
+						"helpText": "CO_ADD_CLIENTID"
+					},
+					"displayOrder": 9
+				},
+				"secret": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": true,
+					"displayLabel": "Secret Key",
+					"helpText": "Add Secret Key / Password required to access the Account",
+					"translationCodes": {
+						"displayLabel": "CO_SECRET_KEY",
+						"helpText": "CO_ADD_SECRET_KEY"
+					},
+					"displayOrder": 10
+				},
+				"appId": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": false,
+					"displayLabel": "App Id",
+					"helpText": "Add App Id required to access the CSP Account",
+					"translationCodes": {
+						"displayLabel": "CO_APP_ID",
+						"helpText": "CO_ADD_APPID_FOR_CSP_ACCOUNT"
+					},
+					"displayOrder": 11
+				},
+				"cspKey": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": false,
+					"displayLabel": "CSP Key",
+					"helpText": "Add CSP Key required to access the CSP Account",
+					"translationCodes": {
+						"displayLabel": "CO_CSP_KEY",
+						"helpText": "CO_ADD_CSP_KEY_FOR_CSP_ACCOUNT"
+					},
+					"displayOrder": 12
+				},
+				"domain": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": false,
+					"displayLabel": "Domain",
+					"helpText": "Add Domain Name required to access the CSP Account",
+					"translationCodes": {
+						"displayLabel": "CO_DOMAIN",
+						"helpText": "CO_ADD_DOMAIN_NAME_FOR_CSP_ACCOUNT"
+					},
+					"displayOrder": 13
+				}
+			}
+		}
+	},
+	"vra": {
+		"providerType": "vra",
+		"displayName": "VRA",
+		"iconImage": "path of icon for this provider",
+		"canSupportSubAccounts": true,
+		"canDiscoverSubAccounts": false,
+		"canDetachSubAccounts": false,
+		"canDoTestConnection": false,
+		"version": 1,
+		"accountMetadata": {
+			"accountNumber": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 250,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Account Number",
+				"helpText": "Add Account Number",
+				"translationCodes": {
+					"displayLabel": "CO_ACCOUNT_NUMBER",
+					"helpText": "CO_ADD_ACCOUNT_NUMBER"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": true
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				],
+				"displayOrder": 1
+			},
+			"endPointVersion": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 5,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Version",
+				"helpText": "Add Endpoint Version",
+				"translationCodes": {
+					"displayLabel": "CO_ENDPOINT_VERSION",
+					"helpText": "CO_ADD_ENDPOINT_VERSION"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": true
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				],
+				"displayOrder": 2
+			},
+			"url": {
+				"type": "string",
+				"canUpdate": true,
+				"regex": "",
+				"minLength": 10,
+				"maxLength": 250,
+				"displayLabel": "Endpoint URL",
+				"helpText": "Add Endpoint URL",
+				"translationCodes": {
+					"displayLabel": "CO_ENDPOINT_URL",
+					"helpText": "CO_ADD_ENDPOINT_URL"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": true
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				],
+				"displayOrder": 3
+			},
+			"tenant": {
+				"type": "string",
+				"canUpdate": true,
+				"regex": "",
+				"minLength": 1,
+				"maxLength": 36,
+				"displayLabel": "Tenant",
+				"helpText": "Add Tenant here",
+				"translationCodes": {
+					"displayLabel": "CO_TENANT",
+					"helpText": "CO_ADD_TENANT_HERE"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": false
+					},
+					{
+						"accountType": "asset",
+						"isRequired": false
+					},
+					{
+						"accountType": "system",
+						"isRequired": false
+					}
+				],
+				"displayOrder": 4
+			},
+			"contentProvider": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 250,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Content Provider",
+				"helpText": "Add Content Provider",
+				"translationCodes": {
+					"displayLabel": "CO_CONTENT_PROVIDER",
+					"helpText": "CO_ADD_CONTENT_PROVIDER"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": false
+					},
+					{
+						"accountType": "asset",
+						"isRequired": false
+					},
+					{
+						"accountType": "system",
+						"isRequired": false
+					}
+				],
+				"displayOrder": 5
+			},
+			"vroEndpoint": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 250,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "vRO Endpoint",
+				"helpText": "Add vRO Endpoint",
+				"translationCodes": {
+					"displayLabel": "CO_VRO_ENDPOINT",
+					"helpText": "CO_ADD_VRO_ENDPOINT"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": false
+					},
+					{
+						"accountType": "asset",
+						"isRequired": false
+					},
+					{
+						"accountType": "system",
+						"isRequired": false
+					}
+				],
+				"displayOrder": 6
+			}
+		},
+		"credentialMetadata": {
+			"costIngestion": {
+				"username": {
+					"type": "string",
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"canUpdate": true,
+					"displayLabel": "User Name",
+					"helpText": "Enter User Name",
+					"translationCodes": {
+						"displayLabel": "CO_USER_NAME",
+						"helpText": "CO_ENTER_USER_NAME"
+					},
+					"displayOrder": 7
+				},
+				"password": {
+					"type": "password",
+					"minLength": 8,
+					"maxLength": 30,
+					"canUpdate": true,
+					"isRequired": true,
+					"displayLabel": "Password",
+					"helpText": "Enter Password",
+					"translationCodes": {
+						"displayLabel": "CO_PASSWORD",
+						"helpText": "CO_ENTER_PASSWORD"
+					},
+					"displayOrder": 8
+				},
+				"tenant": {
+					"type": "string",
+					"canUpdate": true,
+					"regex": "",
+					"minLength": 1,
+					"maxLength": 36,
+					"isRequired": true,
+					"displayLabel": "Tenant",
+					"helpText": "Add Tenant here",
+					"translationCodes": {
+						"displayLabel": "CO_TENANT",
+						"helpText": "CO_ADD_TENANT_HERE"
+					},
+					"displayOrder": 9
+				},
+				"clientId": {
+					"type": "string",
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"canUpdate": true,
+					"displayLabel": "Client ID (vRO)",
+					"helpText": "Enter Client ID (vRO)",
+					"translationCodes": {
+						"displayLabel": "CO_CLIENT_ID_VRO",
+						"helpText": "CO_ENTER_CLIENT_ID_VRO"
+					},
+					"displayOrder": 10
+				},
+				"domain": {
+					"type": "string",
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"canUpdate": true,
+					"displayLabel": "Domain (vRO)",
+					"helpText": "Enter Domain (vRO)",
+					"translationCodes": {
+						"displayLabel": "CO_DOMAIN_VRO",
+						"helpText": "CO_ENTER_DOMAIN_VRO"
+					},
+					"displayOrder": 11
+				}
+			},
+			"provisioning": {
+				"username": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "User Name",
+					"helpText": "Enter User Name",
+					"translationCodes": {
+						"displayLabel": "CO_USER_NAME",
+						"helpText": "CO_ENTER_USER_NAME"
+					},
+					"displayOrder": 12
+				},
+				"password": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "Password",
+					"helpText": "Enter Password",
+					"translationCodes": {
+						"displayLabel": "CO_PASSWORD",
+						"helpText": "CO_ENTER_PASSWORD"
+					},
+					"displayOrder": 13
+				},
+				"tenant": {
+					"type": "string",
+					"canUpdate": true,
+					"regex": "",
+					"minLength": 1,
+					"maxLength": 36,
+					"isRequired": true,
+					"displayLabel": "Tenant",
+					"helpText": "Add Tenant here",
+					"translationCodes": {
+						"displayLabel": "CO_TENANT",
+						"helpText": "CO_ADD_TENANT_HERE"
+					},
+					"displayOrder": 14
+				},
+				"clientId": {
+					"type": "string",
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"canUpdate": true,
+					"displayLabel": "Client ID (vRO)",
+					"helpText": "Enter Client ID (vRO)",
+					"translationCodes": {
+						"displayLabel": "CO_CLIENT_ID_VRO",
+						"helpText": "CO_ENTER_CLIENT_ID_VRO"
+					},
+					"displayOrder": 15
+				},
+				"domain": {
+					"type": "string",
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"canUpdate": true,
+					"displayLabel": "Domain (vRO)",
+					"helpText": "Enter Domain (vRO)",
+					"translationCodes": {
+						"displayLabel": "CO_DOMAIN_VRO",
+						"helpText": "CO_ENTER_DOMAIN_VRO"
+					},
+					"displayOrder": 16
+				}
+			},
+			"assetIngestion": {
+				"username": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "User Name",
+					"helpText": "Enter User Name",
+					"translationCodes": {
+						"displayLabel": "CO_USER_NAME",
+						"helpText": "CO_ENTER_USER_NAME"
+					},
+					"displayOrder": 17
+				},
+				"password": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 10,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "Password",
+					"helpText": "Enter Password",
+					"translationCodes": {
+						"displayLabel": "CO_PASSWORD",
+						"helpText": "CO_ENTER_PASSWORD"
+					},
+					"displayOrder": 18
+				},
+				"tenant": {
+					"type": "string",
+					"canUpdate": true,
+					"regex": "",
+					"minLength": 1,
+					"maxLength": 36,
+					"isRequired": true,
+					"displayLabel": "Tenant",
+					"helpText": "Add Tenant here",
+					"translationCodes": {
+						"displayLabel": "CO_TENANT",
+						"helpText": "CO_ADD_TENANT_HERE"
+					},
+					"displayOrder": 19
+				},
+				"clientId": {
+					"type": "string",
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"canUpdate": true,
+					"displayLabel": "Client ID (vRO)",
+					"helpText": "Enter Client ID (vRO)",
+					"translationCodes": {
+						"displayLabel": "CO_CLIENT_ID_VRO",
+						"helpText": "CO_ENTER_CLIENT_ID_VRO"
+					},
+					"displayOrder": 20
+				},
+				"domain": {
+					"type": "string",
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"canUpdate": true,
+					"displayLabel": "Domain (vRO)",
+					"helpText": "Enter Domain (vRO)",
+					"translationCodes": {
+						"displayLabel": "CO_DOMAIN_VRO",
+						"helpText": "CO_ENTER_DOMAIN_VRO"
+					},
+					"displayOrder": 21
+				}
+			},
+			"catalogIngestion": {
+				"username": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "User Name",
+					"helpText": "Enter User Name",
+					"translationCodes": {
+						"displayLabel": "CO_USER_NAME",
+						"helpText": "CO_ENTER_USER_NAME"
+					},
+					"displayOrder": 22
+				},
+				"password": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 10,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "Password",
+					"helpText": "Enter Password",
+					"translationCodes": {
+						"displayLabel": "CO_PASSWORD",
+						"helpText": "CO_ENTER_PASSWORD"
+					},
+					"displayOrder": 23
+				},
+				"tenant": {
+					"type": "string",
+					"canUpdate": true,
+					"regex": "",
+					"minLength": 1,
+					"maxLength": 36,
+					"isRequired": true,
+					"displayLabel": "Tenant",
+					"helpText": "Add Tenant here",
+					"translationCodes": {
+						"displayLabel": "CO_TENANT",
+						"helpText": "CO_ADD_TENANT_HERE"
+					},
+					"displayOrder": 24
+				},
+				"clientId": {
+					"type": "string",
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"canUpdate": true,
+					"displayLabel": "Client ID (vRO)",
+					"helpText": "Enter Client ID (vRO)",
+					"translationCodes": {
+						"displayLabel": "CO_CLIENT_ID_VRO",
+						"helpText": "CO_ENTER_CLIENT_ID_VRO"
+					},
+					"displayOrder": 25
+				},
+				"domain": {
+					"type": "string",
+					"minLength": 8,
+					"maxLength": 30,
+					"isRequired": true,
+					"canUpdate": true,
+					"displayLabel": "Domain (vRO)",
+					"helpText": "Enter Domain (vRO)",
+					"translationCodes": {
+						"displayLabel": "CO_DOMAIN_VRO",
+						"helpText": "CO_ENTER_DOMAIN_VRO"
+					},
+					"displayOrder": 26
+				}
+			}
+		}
+	},
+	"icd": {
+		"providerType": "icd",
+		"displayName": "ICD",
+		"iconImage": "path of icon for this provider",
+		"canSupportSubAccounts": true,
+		"canDiscoverSubAccounts": false,
+		"canDetachSubAccounts": false,
+		"canDoTestConnection": false,
+		"version": 1,
+		"accountMetadata": {
+			"url": {
+				"type": "string",
+				"canUpdate": true,
+				"regex": "",
+				"minLength": 1,
+				"maxLength": 250,
+				"displayLabel": "ICD URL",
+				"helpText": "Enter IBM Control Desk URL",
+				"translationCodes": {
+					"displayLabel": "CO_ICD_URL",
+					"helpText": "CO_ENTER_IBM_CONTROL_DESK_URL"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": true
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				],
+				"displayOrder": 1
+			}
+		},
+		"credentialMetadata": {
+			"provisioning": {
+				"username": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 50,
+					"isRequired": true,
+					"displayLabel": "User Name",
+					"helpText": "Enter User Name",
+					"translationCodes": {
+						"displayLabel": "CO_USER_NAME",
+						"helpText": "CO_ENTER_USER_NAME"
+					},
+					"displayOrder": 2
+				},
+				"password": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 50,
+					"isRequired": true,
+					"displayLabel": "Password",
+					"helpText": "Enter Password",
+					"translationCodes": {
+						"displayLabel": "CO_PASSWORD",
+						"helpText": "CO_ENTER_PASSWORD"
+					},
+					"displayOrder": 3
+				}
+			},
+			"costIngestion": {
+				"username": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 50,
+					"isRequired": true,
+					"displayLabel": "User Name",
+					"helpText": "Enter User Name",
+					"translationCodes": {
+						"displayLabel": "CO_USER_NAME",
+						"helpText": "CO_ENTER_USER_NAME"
+					},
+					"displayOrder": 4
+				},
+				"password": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 50,
+					"isRequired": true,
+					"displayLabel": "Password",
+					"helpText": "Enter Password",
+					"translationCodes": {
+						"displayLabel": "CO_PASSWORD",
+						"helpText": "CO_ENTER_PASSWORD"
+					},
+					"displayOrder": 5
+				}
+			},
+			"systemIntegration": {
+				"username": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 3,
+					"maxLength": 50,
+					"isRequired": true,
+					"displayLabel": "User Name",
+					"helpText": "Enter User Name",
+					"translationCodes": {
+						"displayLabel": "CO_USER_NAME",
+						"helpText": "CO_ENTER_USER_NAME"
+					},
+					"displayOrder": 6
+				},
+				"password": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 3,
+					"maxLength": 50,
+					"isRequired": true,
+					"displayLabel": "Password",
+					"helpText": "Enter Password",
+					"translationCodes": {
+						"displayLabel": "CO_PASSWORD",
+						"helpText": "CO_ENTER_PASSWORD"
+					},
+					"displayOrder": 7
+				}
+			},
+			"catalogIngestion": {
+				"username": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 50,
+					"isRequired": true,
+					"displayLabel": "User Name",
+					"helpText": "Enter User Name",
+					"translationCodes": {
+						"displayLabel": "CO_USER_NAME",
+						"helpText": "CO_ENTER_USER_NAME"
+					},
+					"displayOrder": 8
+				},
+				"password": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 5,
+					"maxLength": 50,
+					"isRequired": true,
+					"displayLabel": "Password",
+					"helpText": "Enter Password",
+					"translationCodes": {
+						"displayLabel": "CO_PASSWORD",
+						"helpText": "CO_ENTER_PASSWORD"
+					},
+					"displayOrder": 9
+				}
+			}
+		}
+	},
+	"snow": {
+		"providerType": "snow",
+		"displayName": "snow",
+		"iconImage": "path of icon for this provider",
+		"canSupportSubAccounts": true,
+		"canDiscoverSubAccounts": false,
+		"canDetachSubAccounts": false,
+		"canDoTestConnection": false,
+		"version": 1,
+		"accountMetadata": {
+			"version": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 100,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Service Provider Version",
+				"helpText": "Add Service Provider Version",
+				"translationCodes": {
+					"displayLabel": "CO_SERVICE_PROVIDER_VERSION",
+					"helpText": "CO_ADD_SERVICE_PROVIDER_VERSION"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": true
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				],
+				"displayOrder": 1
+			},
+			"url": {
+				"type": "string",
+				"canUpdate": true,
+				"regex": "",
+				"minLength": 3,
+				"maxLength": 250,
+				"displayLabel": "Service Now URL",
+				"helpText": "Enter Service Now Instance URL",
+				"translationCodes": {
+					"displayLabel": "CO_SERVICE_NOW_INSTANCE_URL",
+					"helpText": "CO_ENTER_SERVICE_NOW_INSTANCE_URL"
+				},
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": true
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				],
+				"displayOrder": 2
+			}
+		},
+		"credentialMetadata": {
+			"assetIngestion": {
+				"username": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 3,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "User Name",
+					"helpText": "Enter User Name",
+					"translationCodes": {
+						"displayLabel": "CO_USER_NAME",
+						"helpText": "CO_ENTER_USER_NAME"
+					},
+					"displayOrder": 3
+				},
+				"password": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 3,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "Password",
+					"helpText": "Enter Password",
+					"translationCodes": {
+						"displayLabel": "CO_PASSWORD",
+						"helpText": "CO_ENTER_PASSWORD"
+					},
+					"displayOrder": 4
+				}
+			},
+			"provisioning": {
+				"username": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 3,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "User Name",
+					"helpText": "Enter User Name",
+					"translationCodes": {
+						"displayLabel": "CO_USER_NAME",
+						"helpText": "CO_ENTER_USER_NAME"
+					},
+					"displayOrder": 5
+				},
+				"password": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 3,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "Password",
+					"helpText": "Enter Password",
+					"translationCodes": {
+						"displayLabel": "CO_PASSWORD",
+						"helpText": "CO_ENTER_PASSWORD"
+					},
+					"displayOrder": 6
+				}
+			},
+			"costIngestion": {
+				"username": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 3,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "User Name",
+					"helpText": "Enter User Name",
+					"translationCodes": {
+						"displayLabel": "CO_USER_NAME",
+						"helpText": "CO_ENTER_USER_NAME"
+					},
+					"displayOrder": 7
+				},
+				"password": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 3,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "Password",
+					"helpText": "Enter Password",
+					"translationCodes": {
+						"displayLabel": "CO_PASSWORD",
+						"helpText": "CO_ENTER_PASSWORD"
+					},
+					"displayOrder": 8
+				}
+			},
+			"systemIntegration": {
+				"username": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 3,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "User Name",
+					"helpText": "Enter User Name",
+					"translationCodes": {
+						"displayLabel": "CO_USER_NAME",
+						"helpText": "CO_ENTER_USER_NAME"
+					},
+					"displayOrder": 9
+				},
+				"password": {
+					"type": "password",
+					"canUpdate": true,
+					"minLength": 3,
+					"maxLength": 30,
+					"isRequired": true,
+					"displayLabel": "Password",
+					"helpText": "Enter Password",
+					"translationCodes": {
+						"displayLabel": "CO_PASSWORD",
+						"helpText": "CO_ENTER_PASSWORD"
+					},
+					"displayOrder": 10
+				}
+			}
+		}
+	},
+	"google": {
+		"providerType": "google",
+		"displayName": "Google",
+		"iconImage": "path of icon for this provider",
+		"canSupportSubAccounts": true,
+		"canDiscoverSubAccounts": false,
+		"canDetachSubAccounts": false,
+		"canDoTestConnection": true,
+		"version": 1,
+		"accountMetadata": {
+			"projectName": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 250,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Project Name",
+				"helpText": "Add Project name",
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": true
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				]
+			},
+			"projectId": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 50,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Project Id",
+				"helpText": "Add Project Id",
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": true
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				]
+			},
+			"serviceAccountName": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 30,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Service Account Name",
+				"helpText": "Add service account name",
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": true
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				]
+			},
+			"bucket": {
+				"type": "string",
+				"canUpdate": true,
+				"regex": "",
+				"minLength": 1,
+				"maxLength": 50,
+				"displayLabel": "Bucket",
+				"helpText": "Enter billing bucket details",
+				"appliesTo": [{
+					"accountType": "billing",
+					"isRequired": true
+				}]
+			}
+		},
+		"credentialMetadata": {
+			"costIngestion": {
+				"dataSet": {
+					"type": "string",
+					"canUpdate": true,
+					"minLength": 1,
+					"maxLength": 50,
+					"isRequired": false,
+					"displayLabel": "Data Set",
+					"helpText": "Enter billing data set"
+				},
+				"serviceKey": {
+					"type": "multistring",
+					"canUpdate": true,
+					"minLength": 1,
+					"maxLength": 6000,
+					"isRequired": true,
+					"displayLabel": "Service Key",
+					"helpText": "Enter base 64 encoded google service key"
+				}
+			},
+			"provisioning": {
+				"serviceKey": {
+					"type": "multistring",
+					"canUpdate": true,
+					"minLength": 1,
+					"maxLength": 6000,
+					"isRequired": true,
+					"displayLabel": "Service Key",
+					"helpText": "Enter base 64 encoded google service key"
+				}
+			},
+			"assetIngestion": {
+				"serviceKey": {
+					"type": "multistring",
+					"canUpdate": true,
+					"minLength": 1,
+					"maxLength": 6000,
+					"isRequired": true,
+					"displayLabel": "Service Key",
+					"helpText": "Enter base 64 encoded google service key"
+				}
+			}
+		}
+	},
+	"softlayer": {
+		"providerType": "ibm",
+		"displayName": "IBM",
+		"iconImage": "path of icon for this provider",
+		"canSupportSubAccounts": true,
+		"canDiscoverSubAccounts": false,
+		"canDetachSubAccounts": false,
+		"canDoTestConnection": true,
+		"version": 1,
+		"accountMetadata": {
+			"accountNumber": {
+				"type": "string",
+				"minLength": 1,
+				"maxLength": 250,
+				"canUpdate": true,
+				"regex": "",
+				"displayLabel": "Account Number",
+				"helpText": "Add Account Number",
+				"appliesTo": [{
+						"accountType": "billing",
+						"isRequired": true
+					},
+					{
+						"accountType": "asset",
+						"isRequired": true
+					},
+					{
+						"accountType": "system",
+						"isRequired": true
+					}
+				]
+			}
+		},
+		"credentialMetadata": {
+			"costIngestion": {
+				"username": {
+					"type": "password",
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": true,
+					"canUpdate": true,
+					"regex": "",
+					"displayLabel": "User Name",
+					"helpText": "Add Username here"
+				},
+				"apiKey": {
+					"type": "password",
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": true,
+					"canUpdate": true,
+					"regex": "^[0-9a-zA-Z]*",
+					"displayLabel": "API Key",
+					"helpText": "Add API key here"
+				},
+				"bxapiKey": {
+					"type": "password",
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": false,
+					"canUpdate": true,
+					"regex": "^[0-9a-zA-Z-_]*",
+					"displayLabel": "Bluemix API Key",
+					"helpText": "Add Bluemix API key here"
+				}
+			},
+			"provisioning": {
+				"username": {
+					"type": "password",
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": true,
+					"canUpdate": true,
+					"regex": "",
+					"displayLabel": "User Name",
+					"helpText": "Add Username here"
+				},
+				"apiKey": {
+					"type": "password",
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": true,
+					"canUpdate": true,
+					"regex": "^[0-9a-zA-Z]*",
+					"displayLabel": "API Key",
+					"helpText": "Add API key here"
+				},
+				"bxapiKey": {
+					"type": "password",
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": false,
+					"canUpdate": true,
+					"regex": "^[0-9a-zA-Z-_]*",
+					"displayLabel": "Bluemix API Key",
+					"helpText": "Add Bluemix API key here"
+				}
+			},
+			"assetIngestion": {
+				"username": {
+					"type": "password",
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": true,
+					"canUpdate": true,
+					"regex": "",
+					"displayLabel": "User Name",
+					"helpText": "Add Username here"
+				},
+				"apiKey": {
+					"type": "password",
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": true,
+					"canUpdate": true,
+					"regex": "^[0-9a-zA-Z]*",
+					"displayLabel": "API Key",
+					"helpText": "Add API key here"
+				},
+				"bxapiKey": {
+					"type": "password",
+					"minLength": 5,
+					"maxLength": 100,
+					"isRequired": false,
+					"canUpdate": true,
+					"regex": "^[0-9a-zA-Z-_]*",
+					"displayLabel": "Bluemix API Key",
+					"helpText": "Add Bluemix API key here"
+				}
+			}
+		}
+	}
+}

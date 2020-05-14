@@ -1,0 +1,45 @@
+{
+   "cred_val_Result_success": {
+        "validation_results": {
+        "credential": [
+            {
+                "name": "validation_name_1",
+                "status": {
+                    "message": "success",
+                    "translationcode": "code"
+                },
+                "reason": {
+                    "message": "NA",
+                    "translationcode": "code",
+                    "translationparams": []
+                },
+                "purpose": "provisioning"
+            }
+        ],
+        "validation_count": {
+            "passed": "1",
+            "failed": "1",
+            "unknown": "1",
+            "total": "3"
+        }
+    }
+    },
+    "cred_val_Result_failure": {
+        "statusText": "Bad Request",
+        "jsonSchemaValidation": true,
+        "validations": {
+            "body": [
+                {
+                    "value": {
+                        "data": "123"
+                    },
+                    "property": "request.body",
+                    "messages": [
+                        "requires property \"validation_results\"",
+                        "additionalProperty \"data\" exists in instance when not allowed"
+                    ]
+                }
+            ]
+        }
+    }
+}

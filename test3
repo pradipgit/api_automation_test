@@ -1,0 +1,42 @@
+Host Name :master-hybrid3
+Keys in cbqacorexapikey:$CB_QA_COREX_API_KEY
+Keys in apikey namespace:fe32bf02-e3d6-5afc-88d5-ffcfbd65f44e
+API key :fe32bf02-e3d6-5afc-88d5-ffcfbd65f44e
+URL :https://master-hybrid3-api.multicloud-ibm.com/
+API key decode:fe32bf02-e3d6-5afc-88d5-ffcfbd65f44e
+Host Name :master-hybrid3
+API key:fe32bf02-e3d6-5afc-88d5-ffcfbd65f44e
+Build Version :test3
+URL :https://master-hybrid3-api.multicloud-ibm.com/
+Running testcases of set RulesAPI :
+--------------------------------------
+TestRuleAPI49264
+Rest URL: https://master-hybrid3-api.multicloud-ibm.com/cb-credential-service/api/v2.0/rules/65fba759-40ed-4a44-9b40-3e097e42be37
+https://master-hybrid3-api.multicloud-ibm.com/cb-credential-service/api/v2.0/rules
+200
+Rest URL: https://master-hybrid3-api.multicloud-ibm.com/cb-credential-service/api/v2.0/rules/65fba759-40ed-4a44-9b40-3e097e42be37
+add_rule_success............  OK
+--------------------------------------
+--------------------------------------
+TestRuleAPI49264
+https://master-hybrid3-api.multicloud-ibm.com/cb-credential-service/api/v2.0/rules
+400
+add_rule_failure............  OK
+--------------------------------------
+--------------------------------------
+TestRuleAPI49264
+https://master-hybrid3-api.multicloud-ibm.com/cb-credential-service/api/v2.0/rules
+Rest URL: https://master-hybrid3-api.multicloud-ibm.com/cb-credential-service/api/v2.0/rules/65fba759-40ed-4a44-9b40-3e097e42be37
+200
+Rest URL: https://master-hybrid3-api.multicloud-ibm.com/cb-credential-service/api/v2.0/rules/65fba759-40ed-4a44-9b40-3e097e42be37
+get_rule_success............  OK
+--------------------------------------
+--------------------------------------
+TestRuleAPI49264
+Rest URL: https://master-hybrid3-api.multicloud-ibm.com/cb-credential-service/api/v2.0/rules/ruleId
+404
+get_rule_failure............  Error
+--------------------------------------
+--------------------------------------
+TestRuleAPI49264
+https://master-hybrid3-api.multicloud-ibm.com/cb-credential-service/api/v2.0/rules

@@ -1,0 +1,458 @@
+{
+    "account_failure": {
+        "application": "testApp",
+        "account": {
+            "basicInfo": {
+                "accountName": "testrulesapi",
+                "serviceProviderType": "amazon",
+                "isActive": "Active",
+                "accountType": "subaccount",
+                "userType": "asset",
+                "serviceProviderCode": "amazon",
+                "credential_count": 1
+            },
+            "advancedInfo": {
+                "accountNumber": "lkjasdjfljasd"
+            },
+            "accountId": "f16b0f4a-a76e-499e-b5f7-autoawsintegration"
+        }
+    },
+    "acc_invalid_body": {
+        "account": {
+            "basicInfo": {
+                "accountName": "accinvalidbody",
+                "serviceProviderType": "amazon",
+                "isActive": "Active",
+                "accountType": "subaccount",
+                "userType": "asset",
+                "serviceProviderCode": "amazon",
+                "credential_count": 1
+            },
+            "advancedInfo": {
+                "accountNumber": "lkjasdjfljasd"
+            },
+            "credentials": [],
+            "accountId": "f16b0f4a-a76e-499e-b5f7-autoawsintegration"
+        }
+    },
+    "acc_cred_invalid_body": {
+        "account": {
+            "basicInfo": {
+                "accountName": "accinvalidbody",
+                "serviceProviderType": "amazon",
+                "isActive": "Active",
+                "accountType": "subaccount",
+                "userType": "asset",
+                "serviceProviderCode": "amazon",
+                "credential_count": 1
+            },
+            "advancedInfo": {
+                "accountNumber": "lkjasdjfljasd"
+            },
+            "accountId": "f16b0f4a-a76e-499e-b5f7-autoawsintegration"
+        }
+    },
+    "cred_failure_res": {
+        "application": "testApp",
+        "account": {
+            "basicInfo": {
+                "serviceProviderType": "amazon",
+                "isActive": "Active",
+                "accountType": "subaccount",
+                "userType": "asset",
+                "serviceProviderCode": "amazon",
+                "credential_count": 1
+            },
+            "advancedInfo": {
+                "accountNumber": "lkjasdjfljasd"
+            },
+            "credentials": [
+                {
+                    "credentialName": "testcredrules",
+                    "description": "test",
+                    "purpose": [
+                        "assetIngestion"
+                    ],
+                    "status": "Active",
+                    "passwordFields": {},
+                    "testConnectionStatus": "",
+                    "createdBy": {
+                        "time": "2019-06-28T12:10:35.198Z"
+                    },
+                    "context": [
+                        {
+                            "org": [
+                                "myorg1"
+                            ]
+                        }
+                    ],
+                    "additionalinfo": [
+                        {
+                            "org": [
+                                "myorg1"
+                            ],
+                            "unassignedcontexts": {}
+                        }
+                    ]
+                }
+            ],
+            "accountId": "f16b0f4a-a76e-499e-b5f7-autoawsintegration"
+        }
+    },
+    "acc_val_res": {
+        "status": {
+            "Message": "Validation success",
+            "translateCode": "CO200_VALIDATION_SUCCESS",
+            "translateParameters": []
+        },
+        "validation_results": {
+            "account": {
+                "basicInfo": [
+                    {
+                        "name": "accountName",
+                        "status": {
+                            "message": "success",
+                            "translationcode": "code"
+                        },
+                        "reason": {
+                            "message": "NA",
+                            "translationcode": "code",
+                            "translationparams": []
+                        }
+                    },
+                    {
+                        "name": "serviceProviderType",
+                        "status": {
+                            "message": "success",
+                            "translationcode": "code"
+                        },
+                        "reason": {
+                            "message": "NA",
+                            "translationcode": "code",
+                            "translationparams": []
+                        }
+                    },
+                    {
+                        "name": "userType",
+                        "status": {
+                            "message": "success",
+                            "translationcode": "code"
+                        },
+                        "reason": {
+                            "message": "NA",
+                            "translationcode": "code",
+                            "translationparams": []
+                        }
+                    }
+                ],
+                "advancedInfo": [
+                    {
+                        "name": "accountNumber",
+                        "status": {
+                            "message": "success",
+                            "translationcode": "code"
+                        },
+                        "reason": {
+                            "message": "NA",
+                            "translationcode": "code",
+                            "translationparams": []
+                        }
+                    }
+                ],
+                "validation_count": {
+                    "passed": "1",
+                    "failed": "1",
+                    "unknown": "1",
+                    "total": "3"
+                }
+            }
+        }
+    },
+    "account_validation_response": {
+        "status": {
+            "Message": "Validation success",
+            "translateCode": "CO200_VALIDATION_SUCCESS",
+            "translateParameters": []
+        },
+        "validation_results": {
+            "account": {
+                "basicInfo": [
+                    {
+                        "name": "accountName",
+                        "status": {
+                            "message": "success",
+                            "translationcode": "code"
+                        },
+                        "reason": {
+                            "message": "NA",
+                            "translationcode": "code",
+                            "translationparams": []
+                        }
+                    },
+                    {
+                        "name": "serviceProviderType",
+                        "status": {
+                            "message": "success",
+                            "translationcode": "code"
+                        },
+                        "reason": {
+                            "message": "NA",
+                            "translationcode": "code",
+                            "translationparams": []
+                        }
+                    },
+                    {
+                        "name": "userType",
+                        "status": {
+                            "message": "success",
+                            "translationcode": "code"
+                        },
+                        "reason": {
+                            "message": "NA",
+                            "translationcode": "code",
+                            "translationparams": []
+                        }
+                    }
+                ],
+                "advancedInfo": [
+                    {
+                        "name": "accountNumber",
+                        "status": {
+                            "message": "success",
+                            "translationcode": "code"
+                        },
+                        "reason": {
+                            "message": "NA",
+                            "translationcode": "code",
+                            "translationparams": []
+                        }
+                    }
+                ],
+                "validation_count": {
+                    "passed": "1",
+                    "failed": "1",
+                    "unknown": "1",
+                    "total": "3"
+                }
+            }
+        }
+    },
+    "internal_err": {
+        "translateParameters": [
+            "No Rules found in DB!!!"
+        ],
+        "message": "Error in getting rules :No Rules found in DB!!!",
+        "translateCode": "CO404_ERROR_GETTING_RULE",
+        "statusCode": 404
+    },
+    "invalid_req_res": {
+        "statusText": "Bad Request",
+        "jsonSchemaValidation": true,
+        "validations": {
+            "body": [
+                {
+                    "property": "request.body.account",
+                    "messages": [
+                        "requires property \"credentials\""
+                    ],
+                    "value": {
+                        "advancedInfo": {
+                            "accountNumber": "lkjasdjfljasd"
+                        },
+                        "basicInfo": {
+                            "serviceProviderType": "amazon",
+                            "serviceProviderCode": "amazon",
+                            "credential_count": 1,
+                            "accountName": "accinvalidbody",
+                            "userType": "asset",
+                            "accountType": "subaccount",
+                            "isActive": "Active"
+                        },
+                        "accountId": "f16b0f4a-a76e-499e-b5f7-autoawsintegration"
+                    }
+                }
+            ]
+        }
+    },
+    "acc_invalid_req_res": {
+        "statusText": "Bad Request",
+        "jsonSchemaValidation": true,
+        "validations": {
+            "body": [
+                {
+                    "property": "request.body",
+                    "messages": [
+                        "requires property \"account\""
+                    ],
+                    "value": {}
+                }
+            ]
+        }
+    },
+    "internal_err_acc": {
+        "translateParameters": [
+            "No Rules found in DB!!!"
+        ],
+        "message": "Error in getting rules :No Rules found in DB!!!",
+        "translateCode": "CO404_ERROR_GETTING_RULE",
+        "statusCode": 404
+    },
+    "new_rule": {
+        "ruleName": {
+            "name": "testRule",
+            "translateCode": "test_code"
+        },
+        "validationEndpoint": {
+            "url": "testURL",
+            "credentials": {}
+        },
+        "endpointType": "icd",
+        "isEnabled": true,
+        "validationLevel": "Account",
+        "owningApplication": "testApp",
+        "ruleId": "65fba759-40ed-4a44-9b40-3e097e42be37",
+        "version": 2,
+        "extension": [],
+        "type": "validation_rule",
+        "vault_id": "1768053c-759f-40f1-b42c-d15456659d8e",
+        "_id": "5d19f213320b3a0008757975"
+    },
+    "new_rule_res": {
+        "translateParameters": [],
+        "document": {
+            "owningApplication": "testApp",
+            "extension": [],
+            "ruleId": "65fba759-40ed-4a44-9b40-3e097e42be37",
+            "isEnabled": true,
+            "endpointType": "icd",
+            "validationEndpoint": {
+                "url": "testURL"
+            },
+            "version": 2,
+            "ruleName": {
+                "translateCode": "test_code",
+                "name": "testRule"
+            },
+            "_id": "5d19f213320b3a0008757975",
+            "type": "validation_rule",
+            "validationLevel": "Account"
+        },
+        "translateCode": "CO200_SUCCESSFULLY_CREATED_RULE",
+        "statusCode": 200
+    },
+    "invalid_rule_payload": {
+        "ruleName": {
+            "name": "testRule",
+            "translateCode": "test_code"
+        },
+        "validationEndpoint": {
+            "url": "testURL"
+        },
+        "endpointType": "amazon",
+        "isEnabled": true,
+        "owningApplication": "testApp",
+        "version": 2,
+        "extension": [],
+        "type": "validation_rule"
+    },
+    "invalid_rule_resp": {
+        "statusText": "Bad Request",
+        "jsonSchemaValidation": true,
+        "validations": {
+            "body": [
+                {
+                    "value": {
+                        "ruleName": {
+                            "name": "testRule",
+                            "translateCode": "test_code"
+                        },
+                        "validationEndpoint": {
+                            "url": "testURL"
+                        },
+                        "endpointType": "amazon",
+                        "isEnabled": true,
+                        "owningApplication": "testApp",
+                        "version": 2,
+                        "extension": [],
+                        "type": "validation_rule"
+                    },
+                    "property": "request.body",
+                    "messages": [
+                        "requires property \"validationLevel\""
+                    ]
+                }
+            ]
+        }
+    },
+    "get_rule_res": [
+        {
+            "_id": "5d19f213320b3a0008757975",
+            "ruleName": {
+                "name": "testRule",
+                "translateCode": "test_code"
+            },
+            "validationEndpoint": {
+                "url": "testURL"
+            },
+            "endpointType": "icd",
+            "isEnabled": true,
+            "validationLevel": "Account",
+            "owningApplication": "testApp",
+            "ruleId": "65fba759-40ed-4a44-9b40-3e097e42be37",
+            "version": 2,
+            "extension": [],
+            "type": "validation_rule",
+            "updatedTime": "2019-07-01T12:11:25.510Z"
+        }
+    ],
+    "invalid_get_rule": {
+        "message": "Get ruleByID Failed, Unable to find the validation rule document with id: ruleId",
+        "statusCode": 404,
+        "translateCode": "CO404_GET_RULEBYID_FAILED",
+        "translateParameters": [
+            "ruleId"
+        ]
+    },
+    "delete_rule_success": {
+        "message": "Successfully deleted rule with ID : 65fba759-40ed-4a44-9b40-3e097e42be37",
+        "statusCode": 200,
+        "translateCode": "CO200_SUCCESSFULLY_DELETED_RULE",
+        "translateParameters": []
+    },
+    "delete_rule_fail": {
+        "message": "Delete rule Failed, Unable to find the validation rule document with id: ruleId",
+        "statusCode": 404,
+        "translateCode": "CO404_DELETE_RULE_FAILED_INVALID_ID",
+        "translateParameters": [
+            "ruleId"
+        ]
+    },
+    "rule_status_enable": {
+        "value": true
+    },
+    "rule_status_disable": {
+        "value": false
+    },
+    "rule_patch_res": {
+        "message": "Successfully updated the validation rule",
+        "statusCode": 200,
+        "translateCode": "CO200_SUCCESSFULLY_UPDATED_RULE",
+        "translateParameters": []
+    },
+    "rule_patch_res1": {
+        "message": "The rule with ID 65fba759-40ed-4a44-9b40-3e097e42be37 is already in desired state. isEnabled : true",
+        "statusCode": 200,
+        "translateCode": "CO200_ALREADY_AS_DESIRED",
+        "translateParameters": [
+            "65fba759-40ed-4a44-9b40-3e097e42be37"
+        ]
+    },
+    "rule_patch_fail": {
+        "message": "Patch rule Failed, Unable to find the validation rule document with id: ruleId",
+        "statusCode": 404,
+        "translateCode": "CO404_PATCH_RULE_FAILED_INVALID_ID",
+        "translateParameters": [
+            "ruleId"
+        ]
+    }
+}

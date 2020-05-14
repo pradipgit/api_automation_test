@@ -1,0 +1,1598 @@
+None
+validatePatch_WrongAccountID............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'azure1': 'azure1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/master1abcd/subaccounts
+{'message': 'Given master account with id master1abcd not found',
+ 'statusCode': 404,
+ 'translateCode': 'CO404_MASTERACC_NOT_FOUND',
+ 'translateParameters': []}
+API response:404
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/azure1
+None
+validatePatch_WrongMasterAccountID............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'master1': 'master1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'master2': 'master2'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/master2/subaccounts
+{'Message': 'Account linked successfully',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACCOUNT_LINKED_SUCCESSFULLY',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+{"_id": "5e93f67028609100070841cd", "basicInfo": {"accountName": "amazon1", "serviceProviderType": "amazon", "serviceProviderCode": "amazon", "accountType": "subaccount", "isActive": "Active", "userType": "asset", "description": "automation", "parentAccountId": "master2"}, "advancedInfo": {"accountNumber": "123456"}, "credentials": [], "accountId": "amazon1", "updatedTime": "2020-04-13T05:19:44.374Z", "vault_id": "a37819ad-005b-493c-999e-45a7463e8c70", "modelVersion": "v2.1", "version": 2, "extension": [], "hasError": false}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/master1
+None
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/master2
+None
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+None
+validatePatch_DLinking_ParentMasterAccount............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/deleteaccounts
+{'message': 'Given account with id: amazon2 not found',
+ 'statusCode': 404,
+ 'translateCode': 'CO404_ACC_NOT_FOUND',
+ 'translateParameters': ['amazon2']}
+API response:404
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+None
+bulkdelete_InvalidAccount............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'azure1': 'azure1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/deleteaccounts
+{'Message': 'Accounts deleted successfully',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACCOUNTS_DELETED_SUCCESSFULLY',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+null
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/azure1
+null
+bulkdelete_MultipleAccounts............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'master1': 'master1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon2': 'amazon2'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/deleteaccounts
+{'Message': 'Accounts deleted successfully',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACCOUNTS_DELETED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/master1/subaccounts?link=true&page=1&size=100
+[{"total_rows": 1}, {"basicInfo": {"accountName": "amazon2", "serviceProviderType": "amazon", "serviceProviderCode": "amazon", "accountType": "subaccount", "isActive": "Active", "userType": "asset", "parentAccountId": "master1"}, "advancedInfo": {"accountNumber": "123456"}, "accountId": "amazon2", "updatedTime": "2020-04-13T05:20:06.381Z", "hasError": false, "purpose": []}]
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon2
+None
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/master1
+None
+bulkdelete_VerifyMasterLink............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'master1': 'master1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'message': 'Failed to add an account with name: amazon2 for the service '
+            'provider: azure, since Parent account service provider type: '
+            'amazon is different from asset account.',
+ 'statusCode': 400,
+ 'translateCode': 'CO400_PROVIDER_TYPE_MISMATCH',
+ 'translateParameters': ['amazon2', 'azure', 'amazon']}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/deleteaccounts
+{'Message': 'Accounts deleted successfully',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACCOUNTS_DELETED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+{"_id": "5e93f68e28609100070841d5", "basicInfo": {"accountName": "amazon1", "serviceProviderType": "amazon", "serviceProviderCode": "amazon", "accountType": "subaccount", "isActive": "Active", "userType": "asset"}, "advancedInfo": {"accountNumber": "123456"}, "credentials": [], "accountId": "amazon1", "updatedTime": "2020-04-13T05:20:14.374Z", "vault_id": "a37819ad-005b-493c-999e-45a7463e8c70", "modelVersion": "v2.1", "version": 2, "extension": [], "hasError": false}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon2
+null
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+None
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon2
+None
+bulkdelete_VerifyAssetLink............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'master1': 'master1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1/parentaccountid
+{'message': 'Account delinked successfully',
+ 'translateCode': 'CO200_Account_linked_successfully',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+{"_id": "5e93f69928609100070841d7", "basicInfo": {"accountName": "amazon1", "serviceProviderType": "amazon", "serviceProviderCode": "amazon", "accountType": "subaccount", "isActive": "Active", "userType": "asset"}, "advancedInfo": {"accountNumber": "123456"}, "credentials": [], "accountId": "amazon1", "updatedTime": "2020-04-13T05:20:25.389Z", "vault_id": "a37819ad-005b-493c-999e-45a7463e8c70", "modelVersion": "v2.1", "version": 2, "extension": [], "hasError": false}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+None
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/master1
+None
+dlinkSingleValidAccount............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'master1': 'master1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+None
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1/parentaccountid
+None
+API response:400
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/master1
+None
+dlinkSingleInValidAccount............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1/credentials
+{'message': 'Successfully updated account',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACCOUNT',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+{"_id": "5e93f6a628609100070841da", "basicInfo": {"accountName": "amazon1", "serviceProviderType": "amazon", "serviceProviderCode": "amazon", "accountType": "subaccount", "isActive": "Active", "userType": "asset"}, "advancedInfo": {"accountNumber": "123456"}, "accountId": "amazon1", "updatedTime": "2020-04-13T05:20:38.793Z", "vault_id": "a37819ad-005b-493c-999e-45a7463e8c70", "modelVersion": "v2.1", "version": 2, "extension": [], "hasError": false, "credentials": [{"credentialName": "amzcred", "id": "12345", "status": "Active", "passwordFields": {"secretKey": "********", "accessKey": "********"}, "purpose": ["provisioning"], "context": [{"team": ["CORE-X"], "contextId": "4c2ba1f3-5e75-40c8-8e20-c35b81d6ab80"}], "crefId": "9f2ecaf6-a5fc-4697-99be-b77df488cca8", "isPasswordUpdated": false}]}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+None
+postValidCredential............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1/credentials
+{'message': {'data': '', 'is_valid': False, 'message': 'Invalid team CORE-Xyz'},
+ 'statusCode': 400,
+ 'translateCode': 'CO400_INVALID_CONTEXT'}
+API response:400
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+None
+postCredential_InValidContext............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1/credentials
+{'message': 'Successfully updated account',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACCOUNT',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1/credentials
+{'message': 'Credential name already exist :amzcred',
+ 'statusCode': 409,
+ 'translateCode': 'CO409_CRED_NAME_DUPLICATE',
+ 'translateParameters': ['amzcred']}
+API response:409
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+None
+postDuplicateCredential............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1/credentials
+{'message': 'Successfully updated account',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACCOUNT',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1/credentials
+{'message': 'Credential name already exist :amzcred',
+ 'statusCode': 409,
+ 'translateCode': 'CO409_CRED_NAME_DUPLICATE',
+ 'translateParameters': ['amzcred']}
+API response:409
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+None
+postDuplicateCredential_Name............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1/credentials
+{'message': 'Successfully updated account',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACCOUNT',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1/credentials
+{'message': 'Given credential id already exist',
+ 'statusCode': 409,
+ 'translateCode': 'CO409_DUPLICATE_ID',
+ 'translateParameters': []}
+API response:409
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+None
+postDuplicateCredential_id............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/12345678/credentials
+{'message': 'Unable to fetch the account with id: 12345678',
+ 'statusCode': 404,
+ 'translateCode': 'CO404_UNABLE_FETCH_ACCID',
+ 'translateParameters': ['12345678']}
+API response:404
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+None
+postCredential_wrongAccountId............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazon1': 'amazon1'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1/credentials
+{'message': 'Successfully updated account',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACCOUNT',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+{"_id": "5e93f6c628609100070841e0", "basicInfo": {"accountName": "amazon1", "serviceProviderType": "amazon", "serviceProviderCode": "amazon", "accountType": "subaccount", "isActive": "Active", "userType": "asset"}, "advancedInfo": {"accountNumber": "123456"}, "accountId": "amazon1", "updatedTime": "2020-04-13T05:21:10.671Z", "vault_id": "a37819ad-005b-493c-999e-45a7463e8c70", "modelVersion": "v2.1", "version": 2, "extension": [], "hasError": false, "credentials": [{"credentialName": "amzcred", "id": "12345", "status": "Active", "passwordFields": {"secretKey": "********", "accessKey": "********"}, "purpose": ["provisioning"], "context": [{"team": ["CORE-X"], "contextId": "aab1584c-dd70-4cb7-a833-a1fc09443627"}], "crefId": "f4d19114-a09d-4f2e-a491-55b5101418c9", "isPasswordUpdated": false}]}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/amazon1
+None
+postCredential_generateCredId............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/vault/configuration/name/HashiCorp-Vault
+[{"display_name": "HashiCorp-Vault", "vault_type": "default", "isReadOnly": "false", "vault_adapter_url": "http://cb-mongo-vault-adapter:5880", "vault_endpoint_url": "http://cb-mongo-vault:8220", "is_Hashi": false, "vault_id": "a37819ad-005b-493c-999e-45a7463e8c70"}]
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v1.0/credentialrefs
+{'message': 'CredRefId already in Use',
+ 'statusCode': 409,
+ 'translateCode': 'CO409_CREDENTIAL_ID_ALREADY_USED',
+ 'translateParameters': []}
+postcredential_CrefsId............  Error
+--------------------------------------
+--------------------------------------
+None
+None
+deleteCredential_CrefsId............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/vault/configuration/name/HashiCorp-Vault
+[{"display_name": "HashiCorp-Vault", "vault_type": "default", "isReadOnly": "false", "vault_adapter_url": "http://cb-mongo-vault-adapter:5880", "vault_endpoint_url": "http://cb-mongo-vault:8220", "is_Hashi": false, "vault_id": "a37819ad-005b-493c-999e-45a7463e8c70"}]
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v1.0/credentialrefs
+{'message': 'CredRefId already in Use',
+ 'statusCode': 409,
+ 'translateCode': 'CO409_CREDENTIAL_ID_ALREADY_USED',
+ 'translateParameters': []}
+None
+None
+Testcase did not return any status
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v1.0/credentialrefs
+{'credrefId': 'automationTesting-123-0645422822',
+ 'message': 'Empty vaultID not allowed',
+ 'statusCode': 400,
+ 'translateCode': 'CO400_EMPTY_VAULTID',
+ 'translateParameters': []}
+postCredential_EmptyVaultId............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/vault/configuration/name/HashiCorp-Vault
+[{"display_name": "HashiCorp-Vault", "vault_type": "default", "isReadOnly": "false", "vault_adapter_url": "http://cb-mongo-vault-adapter:5880", "vault_endpoint_url": "http://cb-mongo-vault:8220", "is_Hashi": false, "vault_id": "a37819ad-005b-493c-999e-45a7463e8c70"}]
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v1.0/credentialrefs
+{'message': 'CredRefId already in Use',
+ 'statusCode': 409,
+ 'translateCode': 'CO409_CREDENTIAL_ID_ALREADY_USED',
+ 'translateParameters': []}
+None
+postCredential_EmptyCredential............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v1.0/credentialrefs
+{'jsonSchemaValidation': True,
+ 'statusText': 'Bad Request',
+ 'validations': {'body': [{'messages': ['requires property "credential"'],
+                           'property': 'request.body',
+                           'value': {'crefId': 'automationTesting-123-0645422822'}}]}}
+postCredential_WithoutCredentialandVaultId............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v1.0/credentialrefs
+{'jsonSchemaValidation': True,
+ 'statusText': 'Bad Request',
+ 'validations': {'body': [{'messages': ['requires property "crefId"'],
+                           'property': 'request.body',
+                           'value': {'credential': {'accesskey': '$AWS_ACCESSKEY',
+                                                    'secretKey': '$AWS_SECRETKEY'}}}]}}
+postCredential_WithoutCredential............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/vault/configuration/name/HashiCorp-Vault
+[{"display_name": "HashiCorp-Vault", "vault_type": "default", "isReadOnly": "false", "vault_adapter_url": "http://cb-mongo-vault-adapter:5880", "vault_endpoint_url": "http://cb-mongo-vault:8220", "is_Hashi": false, "vault_id": "a37819ad-005b-493c-999e-45a7463e8c70"}]
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v1.0/credentialrefs
+{'message': 'Input payload validation failed',
+ 'statusCode': 400,
+ 'translateCode': 'CO400_FAILED_TO_FOUND_THE_REQUESTED_URL',
+ 'translateParameters': [{'errors': {'crefId': "'automationTesting-123-0677454-!*()%$##@@!(**' "
+                                               'does not match '
+                                               "'^([^\\\\!\\\\^\\\\&\\\\`\\\\s\\\\:\\\\/\\\\\\\\\\\\[\\\\]\\\\:\\\\;\\\\|\\\\=\\\\,\\\\*\\\\?\\\\<\\\\>\\\\$])+$'"},
+                          'message': 'Input payload validation failed'}]}
+postCredential_RefID_SpecialCharacter............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/vault/configuration/name/HashiCorp-Vault
+[{"display_name": "HashiCorp-Vault", "vault_type": "default", "isReadOnly": "false", "vault_adapter_url": "http://cb-mongo-vault-adapter:5880", "vault_endpoint_url": "http://cb-mongo-vault:8220", "is_Hashi": false, "vault_id": "a37819ad-005b-493c-999e-45a7463e8c70"}]
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v1.0/credentialrefs
+{'message': 'CredRefId already in Use',
+ 'statusCode': 409,
+ 'translateCode': 'CO409_CREDENTIAL_ID_ALREADY_USED',
+ 'translateParameters': []}
+None
+None
+None
+Testcase did not return any status
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/vault/configuration/name/HashiCorp-Vault
+[{"display_name": "HashiCorp-Vault", "vault_type": "default", "isReadOnly": "false", "vault_adapter_url": "http://cb-mongo-vault-adapter:5880", "vault_endpoint_url": "http://cb-mongo-vault:8220", "is_Hashi": false, "vault_id": "a37819ad-005b-493c-999e-45a7463e8c70"}]
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v1.0/credentialrefs
+{'message': 'CredRefId already in Use',
+ 'statusCode': 409,
+ 'translateCode': 'CO409_CREDENTIAL_ID_ALREADY_USED',
+ 'translateParameters': []}
+None
+None
+putCredential_EmptyCredential............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v1.0/credentialrefs
+{'message': 'CredRefId already in Use',
+ 'statusCode': 409,
+ 'translateCode': 'CO409_CREDENTIAL_ID_ALREADY_USED',
+ 'translateParameters': []}
+API response:409
+createCredential_WithValue............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'TestAWSAcMinimal19373': 'f16b0f4a-a76e-499e-aws-testautomationAmazon'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials
+{'message': 'Successfully updated account',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACCOUNT',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials?credentialId=12345&manage=false
+null
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon
+None
+postCredential_ValidCredRef_ValidPassword............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'TestAWSAcMinimal19373': 'f16b0f4a-a76e-499e-aws-testautomationAmazon'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials
+{'message': 'Successfully updated account',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACCOUNT',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials?credentialId=12345&manage=false
+null
+API response:401
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon
+None
+postCredential_ValidCredRef_InValidPassword............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'TestAWSAcMinimal19373': 'f16b0f4a-a76e-499e-aws-testautomationAmazon'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials
+{'message': 'Successfully updated account',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACCOUNT',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials?credentialId=12345&manage=false
+null
+API response:401
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon
+None
+postCredential_ValidCredRef............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'TestAWSAcMinimal19373': 'f16b0f4a-a76e-499e-aws-testautomationAmazon'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials
+{'message': 'Successfully updated account',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACCOUNT',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials?credentialId=12345&manage=false
+null
+API response:401
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon
+None
+postCredential_ValidPasswordField............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'TestAWSAcMinimal19373': 'f16b0f4a-a76e-499e-aws-testautomationAmazon'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials
+{'message': 'New crefid without password not allowed for credential with name: '
+            'amzcred',
+ 'statusCode': 400,
+ 'translateCode': 'CO400_CREDS_WITHOUT_PASSWORDS',
+ 'translateParameters': ['amzcred']}
+API response:400
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon
+None
+postCredential_InValidCrefId............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'TestAWSAcMinimal19373': 'f16b0f4a-a76e-499e-aws-testautomationAmazon'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials
+{'message': 'Successfully updated account',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACCOUNT',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials?credentialId=12345&manage=false
+null
+API response:401
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon
+None
+postCredential_InValidPassword............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'TestAWSAcMinimal19373': 'f16b0f4a-a76e-499e-aws-testautomationAmazon'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials
+{'message': 'Successfully updated account',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACCOUNT',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials?credentialId=12345&manage=false
+null
+API response:401
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon
+None
+None
+postCredential_InvalidCrefId_InvalidPassword............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'TestAWSAcMinimal19373': 'f16b0f4a-a76e-499e-aws-testautomationAmazon'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials
+{'message': 'Successfully updated account',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACCOUNT',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials?credentialId=12345&manage=false
+null
+API response:401
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon
+None
+None
+postCredential_InvalidCrefId_validPassword............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'TestAWSAcMinimal19373': 'f16b0f4a-a76e-499e-aws-testautomationAmazon'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon/credentials
+{'message': 'Credentials without password not allowed for credential with '
+            'name: amzcred',
+ 'statusCode': 404,
+ 'translateCode': 'CO404_CREDS_WITHOUT_PASSWORDS',
+ 'translateParameters': ['amzcred']}
+API response:404
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-a76e-499e-aws-testautomationAmazon
+None
+postCredential_withoutCrefId_withoutPasswordFields_............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazonTestAWSAc19373': 'f16b0f4a-test-automation-0925'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925
+{'message': 'Successfully updated Account and its subAccount.',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACC_AND_SUBACC',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925/credentials?credentialId=cred1&manage=false
+null
+API response:401
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925
+None
+verifyPut_CredRefId............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazonTestAWSAc19373': 'f16b0f4a-test-automation-0925'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925
+{'message': 'Successfully updated Account and its subAccount.',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACC_AND_SUBACC',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925/credentials?credentialId=cred1&manage=false
+null
+API response:401
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925
+None
+verifyPut_ChangeCredRefId............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazonTestAWSAc19373': 'f16b0f4a-test-automation-0925'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925
+{'message': 'Successfully updated Account and its subAccount.',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACC_AND_SUBACC',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925/credentials?credentialId=cred1&manage=false
+null
+API response:401
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925
+None
+verifyPut_newGenegratedCredRefId............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v1.0/credentialrefs
+{'message': 'CredRefId already in Use',
+ 'statusCode': 409,
+ 'translateCode': 'CO409_CREDENTIAL_ID_ALREADY_USED',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazonTestAWSAc19373': 'f16b0f4a-test-automation-0925'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925
+{'message': 'Successfully updated Account and its subAccount.',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_SUCCESSFULLY_UPDATE_ACC_AND_SUBACC',
+ 'translateParameters': []}
+API response:200
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925/credentials?credentialId=cred1&manage=false
+null
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925
+None
+None
+verifyPut_CertificateRefId............  Error
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'message': {'message': 'Empty context not allowed'},
+ 'statusCode': 400,
+ 'translateCode': 'CO400_INVALID_CONTEXT',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925
+None
+verifyPostAccount_WithoutContext............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazonTestAWSAc19373': 'f16b0f4a-test-automation-0925'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925/credentials
+{'message': {'message': 'Empty context not allowed'},
+ 'statusCode': 400,
+ 'translateCode': 'CO400_INVALID_CONTEXT'}
+API response:400
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925
+None
+verifyCredential_WithoutContext............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v1.0/certificatesrefs
+{'message': 'Certificate upload unsuccessful. Invalid request data.',
+ 'statusCode': 403,
+ 'translateCode': 'CO403_CERTIFICATE_UPLOAD_UNSUCCESSFUL',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts
+{'accountIds': [{'amazonTestAWSAc19373': 'f16b0f4a-test-automation-0925'}],
+ 'message': 'Accounts creation successful',
+ 'statusCode': 200,
+ 'translateCode': 'CO200_ACC_CREATED_SUCCESSFULLY',
+ 'translateParameters': []}
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925
+{'message': {'data': '',
+             'is_valid': False,
+             'message': 'Invalid team CORE-X111'},
+ 'statusCode': 400,
+ 'translateCode': 'CO400_INVALID_CONTEXT'}
+API response:400
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/cb-credential-service/api/v2.0/accounts/f16b0f4a-test-automation-0925
+None
+None
+verifyPut_InvalidContext............  OK
+--------------------------------------
+Running testcases of set systemuser :
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/authorization/v1/systemusers/vijethkumarbs
+{'message': '{"message": "user info vijethkumarbs is deleted", '
+            '"translateCode": "CO_USR_INFO_DELETED", "translateParameters": '
+            '["vijethkumarbs"]}'}
+deleteSystemUser............  OK
+--------------------------------------
+--------------------------------------
+Rest URL:https://cb-qa-core-premaster-api.gravitant.net/authorization/v1/sysusermgmt
+{'enable': False}
+disableAuthorization............  OK
+--------------------------------------
+*APIs validation Result:*
+URL: https://cb-qa-core-premaster-api.gravitant.net/ Build Version: test
+patch_readonlyFalse : Passed
+createCredRefId_Amazon : Passed
+createCredRefId_Azure : Passed
+createCredRefId_Google : Passed
+createCredRefId_IBMCloud : Passed
+createCredRefId_ICD : Passed
+createCredRefId_Snow : Passed
+createCredRefId_VRA : Passed
+createCredRefId_Azure_Billing : Passed
+createCredRefId_Google_Billing : Passed
+createCredRefId_Snow_Billing : Passed
+createCredRefId_VRA_Billing : Passed
+createInvalidCredRefId_Amazon : Passed
+postCredRef_Automation : Passed
+onboard_amazon : Passed
+onboard_azure : Passed
+onboard_google : Passed
+onboard_softlayer : Passed
+onboard_icd : Passed
+onboard_snow : Passed
+onboard_vra : Passed
+onboard_aws : Passed
+generateSystemUser : Passed
+createTeamandUser : Passed
+patch_readonlyTrue : Passed
+validate_account_rule_failure : Passed
+validate_account_rule_invalid_body : Passed
+validate_cred_rule_invalid_req : Passed
+validate_cred_rule_failure : Passed
+revalidate_cred_rule_invalid_req : Passed
+revalidate_cred_rule_failure : Passed
+validate_account_rule_success : Passed
+validate_cred_rule_success : Passed
+revalidate_cred_rule_success : Passed
+add_rule_success : Passed
+add_rule_failure : Passed
+get_rule_success : Passed
+get_rule_failure : Passed
+delete_rule_success : Passed
+delete_rule_failure : Passed
+get_all_rules_success : Passed
+patch_rule_status_success : Passed
+patch_rule_status_failure : Passed
+postAccountAWS : Passed
+putAccountAWS : Passed
+deleteAccountAWS : Passed
+getAccountByWrongProviderCode : Passed
+postAccountAWSMinimalInfo : Passed
+postAccountAWSAsset : Passed
+putAccountAWSAsset : Passed
+getAccountByProviderCodeAWSAsset : Passed
+deleteAccountAWSAsset : Passed
+getAccountByWrongProviderCodeAsset : Passed
+getAccountsLimitAndPage : Passed
+deleteAccountAmazonMinimalInfo : Passed
+postAccountAWS_EmptyName_EmptyId : Passed
+createBillingAccount : Passed
+getAccountByProviderCodeAWS : Passed
+postAccount_CORE_5768 : Passed
+postAccount_CORE_7351_PatchCredential_SamePayload : Passed
+postAccount_CORE_7351_PatchCredential : Passed
+getAllProviderCount : Passed
+createMasterAccount_VerifyAuditLog_CORE_6550 : Passed
+deleteMasterAccount_VerifyAuditLog_CORE_6550 : Passed
+createAssetAccount_VerifyAuditLog_CORE_6550 : Passed
+deleteAssetAccount_VerifyAuditLog_CORE_6550 : Passed
+createAccountCredential_VerifyAuditLog_CORE_6550 : Passed
+patchAccountCredential_VerifyAuditLog_CORE_6550 : Passed
+deleteAccountCredential_VerifyAuditLog_CORE_6548 : Passed
+verifyCredRef_AccountDelete : *Failed*
+postAccountAzure : Passed
+putAccountAzure : Passed
+getAccountByProviderCodeAzure : Passed
+deleteAccountAzure : Passed
+CORE2250_postAccountAzureMinimalInfo : Passed
+postAccountAzureAsset : Passed
+putAccountAzureAsset : Passed
+getAccountByProviderCodeAzureAsset : Passed
+deleteAccountAzureAsset : Passed
+deleteAccountAzureMinimalInfo : Passed
+postAccountGoogle : Passed
+putAccountGoogle : Passed
+getAccountByProviderCodeGoogle : Passed
+deleteAccountGoogle : Passed
+CORE2250_postAccountGoogleMinimalInfo : Passed
+CORE2250_getAccountByIdsMinimalInfo : Passed
+CORE2250_putAccountGoogleMinimalInfo : Passed
+CORE2250_deleteAccountgoogleMinimalInfo : Passed
+postAccountGoogleAsset : Passed
+putAccountGoogleAsset : Passed
+getAccountByProviderCodeGoogleAsset : Passed
+deleteAccountGoogleAsset : Passed
+postAccountIBM : Passed
+putAccountIBM : Passed
+getAccountByProviderCodeIBM : Passed
+CORE2250_postAccountIBMCloudMinimalInfo : Passed
+deleteBillingAccountIBM : Passed
+postAccountIBMAsset : Passed
+putAccountIBMAsset : Passed
+getAccountByProviderCodeIBMAsset : Passed
+deleteAccountIBM : Passed
+deleteAccountIBMCloudMinimalInfo : Passed
+postAccountICD : Passed
+putAccountICD : Passed
+getAccountByProviderCodeICD : Passed
+deleteAccountICD : Passed
+postAccountICDSystem : Passed
+putAccountICDSystem : Passed
+getAccountByProviderCodeICDSystem : Passed
+deleteAccountICDSystem : Passed
+postAccountICDAsset : Passed
+putAccountICDAsset : Passed
+getAccountByProviderCodeICDAsset : Passed
+deleteAccountICDAsset : Passed
+postSystemAccount_TestDataCreation : Passed
+postAccountSnow : Passed
+putAccountSnow : Passed
+getAccountByProviderCodeSnow : Passed
+deleteAccountSnow : Passed
+CORE2250_postAccountSnowMinimalInfo : Passed
+postAccountSnowSystem : Passed
+putAccountSnowSystem : Passed
+getAccountByProviderCodeSnowSystem : Passed
+deleteAccountSnowSystem : Passed
+postAccountSnowAsset : Passed
+putAccountSnowAsset : Passed
+getAccountByProviderCodeSnowAsset : Passed
+deleteAccountSnowAsset : Passed
+deleteAccount_SNOW_MinimalInfo : Passed
+postAccountVRA : *Failed*
+putAccountVRA : *Failed*
+getAccountByProviderCodeVRA : *Failed*
+deleteAccountVRA : *Failed*
+CORE2250_postAccountVRAMinimalInfo : *Failed*
+postAccountVRAAsset : *Failed*
+putAccountVRAAsset : *Failed*
+getAccountByProviderCodeVRAAsset : Passed
+deleteAccountVRAAsset : *Failed*
+deleteAccount_VRA_MinimalInfo : *Failed*
+CORE1914_1732_advanceSearchByValidStartDateAndEndDate : Passed
+CORE1914_1732_advanceSearchByValidStartDateAndInvalidEndDate : Passed
+CORE1914_1732_advanceSearchByInValidStartDateAndValidEndDate : Passed
+CORE1914_1732_advanceSearchByInValidStartDateAndInvalidEndDate : Passed
+CORE1914_1732_advanceSearchByActionTypeTest : Passed
+CORE1914_1732_advanceSearchByComponentTest : Passed
+CORE1914_1732_advanceSearchBySubComponentTest : Passed
+CORE1914_1732_advanceSearchByUserTest : Passed
+CORE1914_1732_advanceSearchByUserTeamTest : Passed
+CORE1914_1732_advanceSearchByAllCategoryTest_WithoutTeam : Passed
+CORE1914_1732_advanceSearchByAllCategoryNegativeTest : Passed
+CORE1914_1732_advanceSearchByAllCategoryTestWithTeam : Passed
+postAccountAWS : Passed
+postAccountAWS_Inactive : *Failed*
+get_allAccountsV2_manageFalse : Passed
+get_accountByID_active : Passed
+deleteAccountAWS_active : Passed
+deleteAccountAWS_inactive : *Failed*
+postAccountAWS_Inactive_cred : *Failed*
+get_account_inactiveCred_manageTrue : *Failed*
+get_accountByID_InActive : *Failed*
+deleteAccountAWS_InActive_cred : *Failed*
+postAccountAWS_InactiveAccount_WithActiveCredential_Id : *Failed*
+get_credenital_InActive_Account : *Failed*
+putAccountAWS_Account : Passed
+get_credenital_Active_Account : *Failed*
+putAccountAWS_Inactive_Credential_Account : *Failed*
+get_Inactive_credenital_ManageTrue : *Failed*
+get_Inactive_credenital_ManageFalse : *Failed*
+deleteAccountAWS : Passed
+CORE1909_filterByStartDateGreaterThanEndDate : Passed
+CORE1909_filterByValidStartDataAndValidEndDate : Passed
+CORE1909_filterByValidStartDataAndInValidEndDate : Passed
+CORE1909_filterByInValidStartDataAndValidEndDate : Passed
+CORE1909_filterByInValidStartDataAndInValidEndDate : Passed
+CORE1909_filterByAllTestDescending : Passed
+CORE1909_filterByAllTestAscending : Passed
+CORE1909_filterByAllTestAscendingWrongData : Passed
+getAccountsForWrongLimit : Passed
+getAccountsForWrongPage : Passed
+getSystemAccount : Passed
+getSystemAccountWrongData : Passed
+getBillingAccountWrongData : Passed
+CORE1909_paginationWithValidLimitAndValidPage : Passed
+CORE1909_paginationWithValidLimitAndInValidPage : Passed
+CORE1909_paginationWithInValidLimitAndValidPage : Passed
+CORE1909_paginationWithInValidLimitAndInValidPage : Passed
+createPurpose_1 : Passed
+createPurpose_2 : Passed
+getAllPurpose : Passed
+getPurposeByCode : Passed
+updatePurposeByCode : Passed
+updatePurposeById : Passed
+deletePurposeByCode : Passed
+deletePurposeById : Passed
+searchValid_ProviderAccountV2 : Passed
+searchInvalid_ProviderAccountV2 : Passed
+CORE1914_787_searchByORTextWrong : Passed
+CORE1914_787_searchByANDTextWrong : Passed
+CORE1914_787_searchByANDText : Passed
+CORE1914_787_searchByORText : Passed
+CORE1914_787_searchByCaseInsensitive : Passed
+CORE1914_787_searchByActionTypeTest : Passed
+CORE1914_787_searchByComponentTest : Passed
+CORE1914_787_searchBySubComponantTest : Passed
+CORE1914_787_searchByUserTest : Passed
+CORE1914_787_searchByTeamTest : Passed
+CORE1914_787_searchByInvalidText : Passed
+CORE1909_sortByActionDateDescending : Passed
+CORE1909_sortByActionDateAscending : Passed
+CORE1909_sortByActionTypeDescending : Passed
+CORE1909_sortByActionTypeAscending : Passed
+CORE1909_sortByComponentDescending : Passed
+CORE1909_sortByComponentAscending : Passed
+CORE1909_sortBySubComponentDescending : Passed
+CORE1909_sortBySubComponentAscending : Passed
+CORE1909_sortByUserDescending : Passed
+CORE1909_sortByUserAscending : Passed
+CORE1909_sortByUserTeamDescending : Passed
+CORE1909_sortByUserTeamAscending : Passed
+CORE1909_sortByWrongUserTeamAscending : Passed
+CORE1909_sortByWrongSortTypeDescending : Passed
+test_connection_amazon_billing_onlyPasswordField : *Failed*
+test_connection_amazon_billing_withCrefId_PasswordFields : *Failed*
+test_connection_amazon_billing_OnlycrefId : Passed
+test_connection_amazon_billing_InvalidcrefId : Passed
+test_connection_amazon_billing_wrongPasswordField : Passed
+test_connection_amazon_billing_validCredId_wrongPasswordField : Passed
+test_connection_amazon_billing_InvalidCredId_validPasswordField : *Failed*
+test_connection_amazon_billing_OnlycrefId_withoutValue : Passed
+test_connection_amazon_billing_CertificatecrefId : Passed
+test_connection_emptypasswordFields : Passed
+test_connection_invalidProviders : Passed
+test_connection_amazon_asset : *Failed*
+test_connection_google_asset : *Failed*
+test_connection_ibm_asset : Passed
+test_connection_azure_asset : *Failed*
+test_connection_amazon_billing_invalidCredentials : Passed
+test_connection_amazon_asset_invalidCredentials : Passed
+test_connection_google_asset_invalidCredentials : Passed
+test_connection_ibm_asset_invalidCredentials : Passed
+test_connection_azure_asset_invalidCredentials : Passed
+test_connection_invalid_crefid : Passed
+postAccountAWS : Passed
+postAccountAWSAsset : Passed
+postAccountICD : Passed
+getPurposeFilter_Asset : Passed
+getPurposeFilter_Billing : Passed
+getPurposeFilter_System : Passed
+getPurposeFilter_InvalidServiceProviderCode : Passed
+getPurposeFilter_InvalidPurpose : Passed
+getPurposeFilter_ByInvalidSortBy : Passed
+getPurposeFilter_ByProvisioning : Passed
+getPurposeFilter_ByDetailsView : Passed
+getInvalidPurposeFilter_System : Passed
+getPurposeFilter_ByInvalidPage : Passed
+getPurposeFilter_ByInvalidLimit : Passed
+getPurposeFilter_ByInvalidView : Passed
+getPurposeFilter_ByExtraParameter : Passed
+getPurposeFilter_ByRemoveParameter : Passed
+getPurposeFilter_ByRemoveServiceProvider : Passed
+getPurposeFilter_InvalidTagValue : Passed
+getPurposeFilter_ByInvalidPurpose : Passed
+deleteAccountAWS : Passed
+deleteAccountICD : Passed
+deleteAssetAccount_AWS : Passed
+CORE2327_getdefaultCurrency : Passed
+CORE2327_getAllConvertions : Passed
+CORE2327_Post_Delete_Future_DateConvertionRates : Passed
+CORE2605_getSupportedCurrencies : Passed
+CORE2327_Post_Invalid_ConvertionFormat : Passed
+CORE2327_Post_Delete_PresentDate_ConvertionRates : Passed
+CORE2327_Post_Delete_PastDate_ConvertionRates : Passed
+CORE2327_update_FutureDate_ConvertionRates : Passed
+CORE2327_update_PastDate_ConvertionRates : Passed
+CORE2327_update_CurrentDate_ConvertionRates : Passed
+CORE2327_update_StartDate_ConvertionRates : Passed
+CORE3671_getConversionRateWithHistrory : Passed
+CORE3671_getConversionRateWithoutHistrory : Passed
+CORE3671_getConversionRateById : Passed
+CORE3671_getConversionRateByInvalidID : Passed
+CORE3671_deleteConversionRateByInvalidID : Passed
+CORE3671_getAllConversionRate_DeletedStatus : Passed
+CORE3671_getAllConversionRate_validStatus : Passed
+CORE3671_getConversionRate_MultipleParameter : Passed
+CORE3671_getStatus_DeletedConversionRates : Passed
+CORE3671_DeletedConversionRates_for_ZAR_BRL : Passed
+CORE3671_DeletedConversionRates_for_CAD_CHF : Passed
+CORE3671_DeletedConversionRates_for_ZAR_CHF : Passed
+CORE3671_DeletedConversionRates_for_ZAR_CAD : Passed
+CORE3671_DeletedConversionRates_for_BRL_CAD : Passed
+CORE3671_DeletedConversionRates_for_CHF_CAD : Passed
+CORE3671_DeletedConversionRates_for_HKD_CAD : Passed
+CORE3671_OverWriteConversionRates_for_BRL_AUD : Passed
+CORE3671_VerifyActiveAPI_DeletedRecords : Passed
+CORE3671_VerifyActiveWithHistoryAPI_DeletedRecords : Passed
+CORE3671_getCurrency_MultipleParameter_WithStartDate : Passed
+CORE3671_getCurrency_MultipleParameter_WithEndDate : Passed
+CORE3671_getCurrency_MultipleParameter_WithBetween_StartEndDate : Passed
+CORE2327_update_onlyExchangeRate : Passed
+postValidInstanceCurrency_CORE_5309 : Passed
+postInValidInstanceCurrency_CORE_5309 : Passed
+getVaultConfigurationByName : Passed
+deleteVaultConfiguration : Passed
+postNewDefaultConfiguration : Passed
+deleteNewConfiguration : Passed
+CORE2762_auditArchiveSearchText : Passed
+CORE2762_auditArchiveSearchTextNoValue : Passed
+CORE2762_auditArchiveLimitPage : Passed
+CORE2762_auditArchiveLimitPageWrong : Passed
+CORE2762_auditArchiveJobType : Passed
+CORE2762_auditArchiveStatus : Passed
+CORE2762_auditArchiveSortBy : Passed
+CORE2763_initiateArchive_Jobs : Passed
+postAuditConfigforIP : Passed
+getAuditCadfFormat : Passed
+getAuditSystemIP_DeleteOperation : Passed
+getAuditSystemIP_POSTOperation : Passed
+CORE2273_populateAdvancedSearchScreenComponents : Passed
+CORE2273_populateAdvancedSearchScreenSubComponents : Passed
+CORE2273_populateAdvancedSearchScreenUsers : Passed
+CORE2273_populateAdvancedSearchScreenTeams : Passed
+CORE2273_populateAdvancedSearchScreenMessageTypes : Passed
+CORE2273_populateAdvancedSearchScreenWrongData : Passed
+CORE2268_deleteArchivePolicy : Passed
+CORE2268_postArchivePlicy : Passed
+CORE2268_getArchivePolicy : Passed
+CORE2268_putArchivePlicy : Passed
+getAuditLogArchive : Passed
+verifyStatusofAuditLogArchive : Passed
+postAuditLogArchive_WithoutPolicy : Passed
+postArchivePlicy : Passed
+getAuditLogArchiveByInvalidid : Passed
+postAuditLogArchive_WrongData : Passed
+CORE1915_downloadAuditLogJSONAllParam : Passed
+CORE1915_downloadAuditLogLocalSystemInValidId : Passed
+CORE1915_downloadAuditLogCSV : Passed
+CORE1915_downloadAuditLogCSVNoPassword : Passed
+CORE1915_downloadAuditLogNoformat : Passed
+CORE1915_downloadAuditLogWrongFormat : Passed
+CORE1915_downloadAuditLogBasicSearch : Passed
+CORE1915_downloadAuditLogBasicSearchNoDates : Passed
+CORE1915_downloadAuditLogKeywordSearch : Passed
+CORE1915_downloadAuditLogNoKeyword : Passed
+CORE1915_downloadAuditLogOnlyDates : Passed
+CORE1915_downloadAuditLogOnlyActionType : Passed
+CORE1915_downloadAuditLogOnlyComponent : Passed
+CORE1915_downloadAuditLogOnlySubComponent : Passed
+CORE1915_downloadAuditLogOnlyUser : Passed
+CORE1915_downloadAuditLogOnlyTeam : Passed
+CORE1915_downloadAuditLogOnlyAdvanceSearchNoFilter : Passed
+CORE1915_auditLogPaginationCheck : Passed
+validateAccountwithDuplicateCredentialName_CORE5657 : Passed
+validateAccountwithMixedInvalidContextTeam : Passed
+validateAccountwithMixedInvalidContextTeam_Org : Passed
+postAccount_validMultipleContexts : Passed
+validateUpdateAccountName : Passed
+postAccount_invalidPayloadContexts : Passed
+postSwagger : Passed
+postSwagger_duplicate : Passed
+getSwaggerByApplication_ascending : Passed
+getSwaggerByApplication_descending : Passed
+getSwaggerByService : Passed
+deleteSwaggerByAppName : Passed
+putSwagger : Passed
+deleteSwaggerByServiceName : Passed
+postSwagger_InvalidKey : Passed
+postCurrency_VerifyLog : Passed
+deleteCurrency_VerifyLog : Passed
+putCurrency_VerifyLog : Passed
+postCurrencyFailure_VerifyLog : Passed
+createMasterAccount : Passed
+postAccount_WrongParentID : Passed
+postAccount_ValidParentID : Passed
+getAccount_LinkTrue : Passed
+getAccount_LinkFalse : Passed
+deleteMasterAccount : Passed
+getAssetAccount_DeletedMasterAcc : Passed
+patchAccount_SamePayload : Passed
+patchAccount_ChangeAccNumber : Passed
+patchAccount_AddFields : Passed
+patchAccount_MultipleFieldChanges : Passed
+patchAccount_DifferentProvider : Passed
+patchAccount_RemoveFields : Passed
+deleteAssetAccount : Passed
+postAccountAzure_WrongCode : Passed
+postAccountAzure_WrongType : Passed
+postAccountAzure_WrongCodeType : Passed
+linkAccount_InvalidProvider : Passed
+validatePatch_Bulk_Linking1MasterAccount : Passed
+validatePatch_Bulk_Linking_MultipleMasterAccount : Passed
+validatePatch_Bulk_Linking_MultipleInvalidProviders : Passed
+validatePatch_Link_MastertoMaster : Passed
+validatePatch_WrongAccountID : Passed
+validatePatch_WrongMasterAccountID : Passed
+validatePatch_DLinking_ParentMasterAccount : Passed
+bulkdelete_InvalidAccount : Passed
+bulkdelete_MultipleAccounts : Passed
+bulkdelete_VerifyMasterLink : Passed
+bulkdelete_VerifyAssetLink : Passed
+dlinkSingleValidAccount : Passed
+dlinkSingleInValidAccount : Passed
+postValidCredential : Passed
+postCredential_InValidContext : Passed
+postDuplicateCredential : Passed
+postDuplicateCredential_Name : Passed
+postDuplicateCredential_id : Passed
+postCredential_wrongAccountId : Passed
+postCredential_generateCredId : Passed
+patch_readonlyFalse : Passed
+putCredentialRefID_InvalidPayload : *Failed*
+postcredential_CrefsId : Passed
+deleteCredential_CrefsId : *Failed*
+getCredential_CrefsId : *Failed*
+postCredential_EmptyVaultId : Passed
+postCredential_EmptyCredential : Passed
+postCredential_WithoutCredentialandVaultId : Passed
+postCredential_WithoutCredential : Passed
+postCredential_RefID_SpecialCharacter : Passed
+putCredential_RefID : *Failed*
+putCredential_EmptyCredential : *Failed*
+createCredential_WithValue : Passed
+patch_readonlyTrue : Passed
+postCredential_ValidCredRef : *Failed*
+postCredential_InValidCrefId : Passed
+postCredential_withoutCrefId_withoutPasswordFields : Passed
+verifyPut_CredRefId : *Failed*
+verifyPut_ChangeCredRefId : Passed
+verifyPostAccount_WithoutContext : Passed
+verifyCredential_WithoutContext : Passed
+verifyPut_InvalidContext : Passed
+PatchAccount_SameAccountName : Passed
+PatchAccount_DuplicateAccountName : Passed
+postAccountAWS : Passed
+getAccountById_SystemUser_withProviderCredsTrue : *Failed*
+getAccountById_SystemUser_withProviderCredsFalse : *Failed*
+getAccountById_TSAUser_withProviderCredsFalse : Passed
+getAccountById_TSAUser_withProviderCredsTrue : Passed
+accountSearch_withProviderCreds_true_view_summary_TSA : Passed
+accountSearch_withProviderCreds_false_view_summary_TSA : Passed
+accountSearch_withProviderCreds_true_view_detailed_TSA : Passed
+accountSearch_withProviderCreds_false_view_detailed_TSA : Passed
+accountSearch_withProviderCreds_false_view_detailed_SysUser : *Failed*
+accountSearch_withProviderCreds_True_view_detailed_SysUser : *Failed*
+accountSearch_withProviderCreds_false_view_summary_SysUser : *Failed*
+accountSearch_withProviderCreds_True_view_summary_SysUser : *Failed*
+accountSearch_withoutAccountType_summary : Passed
+accountSearch_withoutAccountType_detailed : Passed
+deleteAccountAWS : Passed
+postAccountSearch_WithInvalidARN : *Failed*
+verifyCredRef_MultipleCredentials : Passed
+update_validation_result_failure : Passed
+create_validation_result_success : Passed
+update_validation_result_success : Passed
+patch_validation_result_fail : Passed
+patch_validation_result_success : Passed
+test_store_cred_res_success : Passed
+test_update_cred_Res_success1 : Passed
+test_update_cred_Res_success2 : Passed
+test_get_val_res_by_id_success : Passed
+test_get_val_res_by_id_failure : Passed
+test_get_val_res_by_credid_success : Passed
+test_get_val_res_by_credid_failure : Passed
+test_get_val_count_by_id_success : Passed
+test_get_val_count_by_id_failure : Passed
+test_get_val_count_by_credid_success : Passed
+test_get_val_count_by_credid_failure : Passed
+patch_readonlyFalse : Passed
+onboard_amazon : Passed
+postAccountAWS : Passed
+putAccountAWS : Passed
+deleteAccountAWS : Passed
+getAccountByWrongProviderCode : Passed
+postAccountAWSMinimalInfo : Passed
+postAccountAWSAsset : Passed
+putAccountAWSAsset : Passed
+getAccountByProviderCodeAWSAsset : Passed
+deleteAccountAWSAsset : Passed
+getAccountByWrongProviderCodeAsset : Passed
+deleteAccountAmazonMinimalInfo : Passed
+postAccountAWS_EmptyName_EmptyId : Passed
+createBillingAccount : Passed
+getAccountByProviderCodeAWS : Passed
+postAccountAzure : Passed
+putAccountAzure : Passed
+getAccountByProviderCodeAzure : Passed
+deleteAccountAzure : Passed
+CORE2250_postAccountAzureMinimalInfo : Passed
+postAccountAzureAsset : Passed
+putAccountAzureAsset : Passed
+getAccountByProviderCodeAzureAsset : Passed
+deleteAccountAzureAsset : Passed
+deleteAccountAzureMinimalInfo : Passed
+postAccountGoogle : Passed
+putAccountGoogle : Passed
+getAccountByProviderCodeGoogle : Passed
+deleteAccountGoogle : Passed
+CORE2250_postAccountGoogleMinimalInfo : Passed
+CORE2250_getAccountByIdsMinimalInfo : Passed
+CORE2250_putAccountGoogleMinimalInfo : Passed
+CORE2250_deleteAccountgoogleMinimalInfo : Passed
+postAccountGoogleAsset : Passed
+putAccountGoogleAsset : Passed
+getAccountByProviderCodeGoogleAsset : Passed
+deleteAccountGoogleAsset : Passed
+postAccountIBM : Passed
+putAccountIBM : Passed
+getAccountByProviderCodeIBM : Passed
+CORE2250_postAccountIBMCloudMinimalInfo : Passed
+deleteBillingAccountIBM : Passed
+postAccountIBMAsset : Passed
+putAccountIBMAsset : Passed
+getAccountByProviderCodeIBMAsset : Passed
+deleteAccountIBM : Passed
+deleteAccountIBMCloudMinimalInfo : Passed
+postAccountICD : Passed
+putAccountICD : Passed
+getAccountByProviderCodeICD : Passed
+deleteAccountICD : Passed
+postAccountICDSystem : Passed
+putAccountICDSystem : Passed
+getAccountByProviderCodeICDSystem : Passed
+deleteAccountICDSystem : Passed
+postAccountICDAsset : Passed
+putAccountICDAsset : Passed
+getAccountByProviderCodeICDAsset : Passed
+deleteAccountICDAsset : Passed
+postSystemAccount_TestDataCreation : Passed
+postAccountSnow : Passed
+putAccountSnow : Passed
+getAccountByProviderCodeSnow : Passed
+deleteAccountSnow : Passed
+CORE2250_postAccountSnowMinimalInfo : Passed
+postAccountSnowSystem : Passed
+putAccountSnowSystem : Passed
+getAccountByProviderCodeSnowSystem : Passed
+deleteAccountSnowSystem : Passed
+postAccountSnowAsset : Passed
+putAccountSnowAsset : Passed
+getAccountByProviderCodeSnowAsset : Passed
+deleteAccountSnowAsset : Passed
+deleteAccount_SNOW_MinimalInfo : Passed
+postAccountVRA : *Failed*
+putAccountVRA : *Failed*
+getAccountByProviderCodeVRA : *Failed*
+deleteAccountVRA : *Failed*
+CORE2250_postAccountVRAMinimalInfo : *Failed*
+postAccountVRAAsset : *Failed*
+putAccountVRAAsset : *Failed*
+getAccountByProviderCodeVRAAsset : Passed
+deleteAccountVRAAsset : *Failed*
+deleteAccount_VRA_MinimalInfo : *Failed*
+CORE1914_1732_advanceSearchByValidStartDateAndEndDate : Passed
+CORE1914_1732_advanceSearchByValidStartDateAndInvalidEndDate : Passed
+CORE1914_1732_advanceSearchByInValidStartDateAndValidEndDate : Passed
+CORE1914_1732_advanceSearchByInValidStartDateAndInvalidEndDate : Passed
+CORE1914_1732_advanceSearchByActionTypeTest : Passed
+CORE1914_1732_advanceSearchByComponentTest : Passed
+CORE1914_1732_advanceSearchBySubComponentTest : Passed
+CORE1914_1732_advanceSearchByUserTest : Passed
+CORE1914_1732_advanceSearchByUserTeamTest : Passed
+CORE1914_1732_advanceSearchByAllCategoryTest_WithoutTeam : Passed
+CORE1914_1732_advanceSearchByAllCategoryNegativeTest : Passed
+CORE1914_1732_advanceSearchByAllCategoryTestWithTeam : Passed
+postAccountAWS : Passed
+postAccountAWS_Inactive : *Failed*
+get_allAccountsV2_manageFalse : Passed
+get_accountByID_active : Passed
+deleteAccountAWS_active : Passed
+deleteAccountAWS_inactive : *Failed*
+postAccountAWS_Inactive_cred : *Failed*
+get_account_inactiveCred_manageTrue : *Failed*
+get_accountByID_InActive : *Failed*
+deleteAccountAWS_InActive_cred : *Failed*
+postAccountAWS_InactiveAccount_WithActiveCredential_Id : *Failed*
+get_credenital_InActive_Account : *Failed*
+putAccountAWS_Account : Passed
+get_credenital_Active_Account : *Failed*
+putAccountAWS_Inactive_Credential_Account : *Failed*
+get_Inactive_credenital_ManageTrue : *Failed*
+get_Inactive_credenital_ManageFalse : *Failed*
+deleteAccountAWS : Passed
+CORE1909_filterByStartDateGreaterThanEndDate : Passed
+CORE1909_filterByValidStartDataAndValidEndDate : Passed
+CORE1909_filterByValidStartDataAndInValidEndDate : Passed
+CORE1909_filterByInValidStartDataAndValidEndDate : Passed
+CORE1909_filterByInValidStartDataAndInValidEndDate : Passed
+CORE1909_filterByAllTestDescending : Passed
+CORE1909_filterByAllTestAscending : Passed
+CORE1909_filterByAllTestAscendingWrongData : Passed
+getAccountsForWrongLimit : Passed
+getAccountsForWrongPage : Passed
+getSystemAccount : Passed
+getSystemAccountWrongData : Passed
+getBillingAccountWrongData : Passed
+CORE1909_paginationWithValidLimitAndValidPage : Passed
+CORE1909_paginationWithValidLimitAndInValidPage : Passed
+CORE1909_paginationWithInValidLimitAndValidPage : Passed
+CORE1909_paginationWithInValidLimitAndInValidPage : Passed
+createPurpose_1 : Passed
+createPurpose_2 : Passed
+getAllPurpose : Passed
+getPurposeByCode : Passed
+updatePurposeByCode : Passed
+updatePurposeById : Passed
+deletePurposeByCode : Passed
+deletePurposeById : Passed
+searchValid_ProviderAccountV2 : Passed
+searchInvalid_ProviderAccountV2 : Passed
+CORE1914_787_searchByORTextWrong : Passed
+CORE1914_787_searchByANDTextWrong : Passed
+CORE1914_787_searchByANDText : Passed
+CORE1914_787_searchByORText : Passed
+CORE1914_787_searchByCaseInsensitive : Passed
+CORE1914_787_searchByActionTypeTest : Passed
+CORE1914_787_searchByComponentTest : Passed
+CORE1914_787_searchBySubComponantTest : Passed
+CORE1914_787_searchByUserTest : Passed
+CORE1914_787_searchByTeamTest : Passed
+CORE1914_787_searchByInvalidText : Passed
+CORE1909_sortByActionDateDescending : Passed
+CORE1909_sortByActionDateAscending : Passed
+CORE1909_sortByActionTypeDescending : Passed
+CORE1909_sortByActionTypeAscending : Passed
+CORE1909_sortByComponentDescending : Passed
+CORE1909_sortByComponentAscending : Passed
+CORE1909_sortBySubComponentDescending : Passed
+CORE1909_sortBySubComponentAscending : Passed
+CORE1909_sortByUserDescending : Passed
+CORE1909_sortByUserAscending : Passed
+CORE1909_sortByUserTeamDescending : Passed
+CORE1909_sortByUserTeamAscending : Passed
+CORE1909_sortByWrongUserTeamAscending : Passed
+CORE1909_sortByWrongSortTypeDescending : Passed
+createCredential_WithValue : Passed
+postCertificate_RefId : Passed
+test_connection_amazon_billing_onlyPasswordField : *Failed*
+test_connection_amazon_billing_withCrefId_PasswordFields : *Failed*
+test_connection_amazon_billing_InvalidcrefId : Passed
+test_connection_amazon_billing_InvalidCredId_validPasswordField : *Failed*
+test_connection_amazon_billing_wrongPasswordField : Passed
+test_connection_amazon_billing_validCredId_wrongPasswordField : Passed
+createCredential_WithoutValue : Passed
+test_connection_emptypasswordFields : Passed
+test_connection_invalidProviders : Passed
+test_connection_amazon_asset : *Failed*
+test_connection_google_asset : *Failed*
+test_connection_ibm_asset : *Failed*
+test_connection_azure_asset : *Failed*
+test_connection_amazon_billing_invalidCredentials : Passed
+test_connection_amazon_asset_invalidCredentials : Passed
+test_connection_google_asset_invalidCredentials : Passed
+test_connection_ibm_asset_invalidCredentials : Passed
+test_connection_azure_asset_invalidCredentials : Passed
+postAccountAWS : Passed
+postAccountAWSAsset : Passed
+postAccountICD : Passed
+getPurposeFilter_Asset : Passed
+getPurposeFilter_Billing : Passed
+getPurposeFilter_System : Passed
+getPurposeFilter_InvalidServiceProviderCode : Passed
+getPurposeFilter_InvalidPurpose : Passed
+getPurposeFilter_ByInvalidSortBy : Passed
+getPurposeFilter_ByProvisioning : Passed
+getPurposeFilter_ByDetailsView : Passed
+getInvalidPurposeFilter_System : Passed
+getPurposeFilter_ByInvalidPage : Passed
+getPurposeFilter_ByInvalidLimit : Passed
+getPurposeFilter_ByInvalidView : Passed
+getPurposeFilter_ByExtraParameter : Passed
+getPurposeFilter_ByRemoveParameter : Passed
+getPurposeFilter_ByRemoveServiceProvider : Passed
+getPurposeFilter_InvalidTagValue : Passed
+getPurposeFilter_ByInvalidPurpose : Passed
+deleteAccountAWS : Passed
+deleteAccountICD : Passed
+deleteAssetAccount_AWS : Passed
+CORE2273_populateAdvancedSearchScreenComponents : Passed
+CORE2273_populateAdvancedSearchScreenSubComponents : Passed
+CORE2273_populateAdvancedSearchScreenUsers : Passed
+CORE2273_populateAdvancedSearchScreenTeams : Passed
+CORE2273_populateAdvancedSearchScreenMessageTypes : Passed
+CORE2273_populateAdvancedSearchScreenWrongData : Passed
+CORE2762_auditArchiveSearchText : Passed
+CORE2762_auditArchiveSearchTextNoValue : Passed
+CORE2762_auditArchiveLimitPage : Passed
+CORE2762_auditArchiveLimitPageWrong : Passed
+CORE2762_auditArchiveJobType : Passed
+CORE2762_auditArchiveStatus : Passed
+CORE2762_auditArchiveSortBy : Passed
+CORE2763_initiateArchive_Jobs : Passed
+postAuditConfigforIP : Passed
+getAuditCadfFormat : Passed
+getAuditSystemIP_DeleteOperation : Passed
+getAuditSystemIP_POSTOperation : Passed
+CORE1915_downloadAuditLogJSONAllParam : Passed
+CORE1915_downloadAuditLogLocalSystemInValidId : Passed
+CORE1915_downloadAuditLogCSV : Passed
+CORE1915_downloadAuditLogCSVNoPassword : Passed
+CORE1915_downloadAuditLogNoformat : Passed
+CORE1915_downloadAuditLogWrongFormat : Passed
+CORE1915_downloadAuditLogBasicSearch : Passed
+CORE1915_downloadAuditLogBasicSearchNoDates : Passed
+CORE1915_downloadAuditLogKeywordSearch : Passed
+CORE1915_downloadAuditLogNoKeyword : Passed
+CORE1915_downloadAuditLogOnlyDates : Passed
+CORE1915_downloadAuditLogOnlyActionType : Passed
+CORE1915_downloadAuditLogOnlyComponent : Passed
+CORE1915_downloadAuditLogOnlySubComponent : Passed
+CORE1915_downloadAuditLogOnlyUser : Passed
+CORE1915_downloadAuditLogOnlyTeam : Passed
+CORE1915_downloadAuditLogOnlyAdvanceSearchNoFilter : Passed
+CORE1915_auditLogPaginationCheck : Passed
+getVaultConfigurationByName : Passed
+deleteVaultConfiguration : Passed
+postNewDefaultConfiguration : Passed
+deleteNewConfiguration : Passed
+getAccountByID_SystemUser : *Failed*
+validateAccountwithDuplicateCredentialName_CORE5657 : Passed
+validateAccountwithMixedInvalidContextTeam : Passed
+validateAccountwithMixedInvalidContextTeam_Org : Passed
+postAccount_validMultipleContexts : Passed
+validateUpdateAccountName : Passed
+postAccount_invalidPayloadContexts : Passed
+postSwagger : Passed
+postSwagger_duplicate : Passed
+getSwaggerByApplication_ascending : Passed
+getSwaggerByApplication_descending : Passed
+getSwaggerByService : Passed
+deleteSwaggerByAppName : Passed
+putSwagger : Passed
+deleteSwaggerByServiceName : Passed
+postSwagger_InvalidKey : Passed
+postCurrency_VerifyLog : Passed
+deleteCurrency_VerifyLog : Passed
+putCurrency_VerifyLog : Passed
+postCurrencyFailure_VerifyLog : Passed
+createMasterAccount : Passed
+postAccount_WrongParentID : Passed
+postAccount_ValidParentID : Passed
+getAccount_LinkTrue : Passed
+getAccount_LinkFalse : Passed
+deleteMasterAccount : Passed
+getAssetAccount_DeletedMasterAcc : Passed
+patchAccount_SamePayload : Passed
+patchAccount_ChangeAccNumber : Passed
+patchAccount_AddFields : Passed
+patchAccount_MultipleFieldChanges : Passed
+patchAccount_DifferentProvider : Passed
+patchAccount_RemoveFields : Passed
+deleteAssetAccount : Passed
+postAccountAzure_WrongCode : Passed
+postAccountAzure_WrongType : Passed
+postAccountAzure_WrongCodeType : Passed
+linkAccount_InvalidProvider : Passed
+validatePatch_Bulk_Linking1MasterAccount : Passed
+validatePatch_Bulk_Linking_MultipleMasterAccount : Passed
+validatePatch_Bulk_Linking_MultipleInvalidProviders : Passed
+validatePatch_Link_MastertoMaster : Passed
+validatePatch_WrongAccountID : Passed
+validatePatch_WrongMasterAccountID : Passed
+validatePatch_DLinking_ParentMasterAccount : Passed
+bulkdelete_InvalidAccount : Passed
+bulkdelete_MultipleAccounts : Passed
+bulkdelete_VerifyMasterLink : Passed
+bulkdelete_VerifyAssetLink : Passed
+dlinkSingleValidAccount : Passed
+dlinkSingleInValidAccount : Passed
+postValidCredential : Passed
+postCredential_InValidContext : Passed
+postDuplicateCredential : Passed
+postDuplicateCredential_Name : Passed
+postDuplicateCredential_id : Passed
+postCredential_wrongAccountId : Passed
+postCredential_generateCredId : Passed
+postcredential_CrefsId : *Failed*
+deleteCredential_CrefsId : *Failed*
+getCredential_CrefsId : *Failed*
+postCredential_EmptyVaultId : Passed
+postCredential_EmptyCredential : *Failed*
+postCredential_WithoutCredentialandVaultId : Passed
+postCredential_WithoutCredential : Passed
+postCredential_RefID_SpecialCharacter : Passed
+putCredential_RefID : *Failed*
+putCredential_EmptyCredential : *Failed*
+createCredential_WithValue : Passed
+postCredential_ValidCredRef_ValidPassword : *Failed*
+postCredential_ValidCredRef_InValidPassword : *Failed*
+postCredential_ValidCredRef : *Failed*
+postCredential_ValidPasswordField : *Failed*
+postCredential_InValidCrefId : Passed
+postCredential_InValidPassword : *Failed*
+postCredential_InvalidCrefId_InvalidPassword : *Failed*
+postCredential_InvalidCrefId_validPassword : *Failed*
+postCredential_withoutCrefId_withoutPasswordFields_ : Passed
+verifyPut_CredRefId : *Failed*
+verifyPut_ChangeCredRefId : *Failed*
+verifyPut_newGenegratedCredRefId : *Failed*
+verifyPut_CertificateRefId : *Failed*
+verifyPostAccount_WithoutContext : Passed
+verifyCredential_WithoutContext : Passed
+verifyPut_InvalidContext : Passed
+deleteSystemUser : Passed
+disableAuthorization : Passed
+
+
+*Test Execution Summary*
+Total Tests: 803; Passed: 715; Failed: 88
+*Total Time Taken for Execution : 2027.6720991134644 seconds *

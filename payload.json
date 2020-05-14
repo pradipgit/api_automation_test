@@ -1,0 +1,354 @@
+{
+  "account_amazon_1" : {
+    "account": {
+      "accountId": "f16b0f4a-amazon-asset-account-id-viz7",
+      "basicInfo": {
+        "accountName": "f16b0f4a-amazon-asset-account-viz7",
+        "serviceProviderType": "amazon",
+        "serviceProviderCode": "amazon",
+        "accountType": "subaccount",
+        "isActive": "Active",
+        "userType": "asset"
+      },
+      "advancedInfo": {
+        "accountNumber": "123456"
+      },
+      "credentials": [
+        {
+          "credentialName": "cred1",
+          "crefId": "amazon-cref-001",
+          "purpose": [
+            "provisioning"
+          ],
+          "context": [
+            {
+              "team": [
+                "CORE-X"
+              ]
+            }
+          ],
+          "status": "Active"
+        }
+      ]
+    }
+  },
+  "migration" :
+  {
+     "migrate_to": "v2.1"
+  },
+  "account_amazon_2" : {
+    "account": {
+      "accountId": "f16b0f4a-amazon-asset-account-id-viz7",
+      "basicInfo": {
+        "accountName": "f16b0f4a-amazon-asset-account-viz8",
+        "serviceProviderType": "amazon",
+        "serviceProviderCode": "amazon",
+        "accountType": "subaccount",
+        "isActive": "Active",
+        "userType": "asset"
+      },
+      "advancedInfo": {
+        "accountNumber": "789012"
+      },
+      "credentials": [
+        {
+          "credentialName": "cred1",
+          "crefId": "amazon-cref-001",
+          "purpose": [
+            "provisioning"
+          ],
+          "context": [
+            {
+              "team": [
+                "CORE-X"
+              ]
+            }
+          ],
+          "status": "Active"
+        }
+      ]
+    }
+  },
+  "account_duplicate_credentials" :
+  {
+      "account":
+                {
+                    "accountId": "f16b0f4a",
+                    "basicInfo": {
+                        "accountName": "amazon_account_corex_test",
+                        "serviceProviderType": "amazon",
+                        "serviceProviderCode": "amazon",
+                        "accountType": "subaccount",
+                        "isActive": "Active",
+                        "userType": "asset"
+                    },
+                    "advancedInfo": {
+                        "accountNumber": "123456"
+                    },
+                    "credentials": [
+                        {
+                            "credentialName": "amazon11158",
+                            "crefId": "amazon-cref-001",
+                            "purpose": [
+                                "provisioning"
+                            ],
+                            "context": [
+                                {
+                                    "team": [
+                                        "CORE-X"
+                                    ]
+                                }
+                            ]
+                            ,
+                            "status": "Active"
+                        },
+                        {
+                            "credentialName": "AMAZON11158",
+                            "crefId": "amazon-cref-001",
+                            "purpose": [
+                                "provisioning"
+                            ],
+                            "context": [
+                                {
+                                    "team": [
+                                        "CORE-X"
+                                    ]
+                                }
+                            ]
+                            ,
+                            "status": "Active"
+                        }
+
+                    ]
+
+                }
+  },
+  "account_Mixedinvalid_credentials" :
+  {
+      "account":
+                {
+                    "accountId": "f16b0f4a",
+                    "basicInfo": {
+                        "accountName": "amazon_account_corex_test",
+                        "serviceProviderType": "amazon",
+                        "serviceProviderCode": "amazon",
+                        "accountType": "subaccount",
+                        "isActive": "Active",
+                        "userType": "asset"
+                    },
+                    "advancedInfo": {
+                        "accountNumber": "123456"
+                    },
+                    "credentials": [
+                        {
+                            "credentialName": "cred1",
+                            "crefId": "amazon-cref-001",
+                            "purpose": [
+                                "provisioning"
+                            ],
+                            "context": [
+                                {
+                                    "team": [
+                                        "CORE-X"
+                                    ]
+                                }
+                            ]
+                            ,
+                            "status": "Active"
+                        },
+                        {
+                            "credentialName": "cred2",
+                            "crefId": "amazon-cref-001",
+                            "purpose": [
+                                "provisioning"
+                            ],
+                            "context": [
+                                {
+                                    "team": [
+                                        "CORE-X1234"
+                                    ]
+                                }
+                            ]
+                            ,
+                            "status": "Active"
+                        }
+
+                    ]
+
+                }
+  },
+  "account_Mixedinvalid_credentials_team_org" :
+  {
+      "account":
+                {
+                    "accountId": "f16b0f4a",
+                    "basicInfo": {
+                        "accountName": "amazon_account_corex_test",
+                        "serviceProviderType": "amazon",
+                        "serviceProviderCode": "amazon",
+                        "accountType": "subaccount",
+                        "isActive": "Active",
+                        "userType": "asset"
+                    },
+                    "advancedInfo": {
+                        "accountNumber": "123456"
+                    },
+                    "credentials": [
+                        {
+                            "credentialName": "cred1",
+                            "crefId": "amazon-cref-001",
+                            "purpose": [
+                                "provisioning"
+                            ],
+                            "context": [
+                                {
+                                    "team": [
+                                        "CORE-X"
+                                    ]
+                                }
+                            ]
+                            ,
+                            "status": "Active"
+                        },
+                        {
+                            "credentialName": "cred2",
+                            "crefId": "amazon-cref-001",
+                            "purpose": [
+                                "provisioning"
+                            ],
+                            "context": [
+                                {
+                                    "org": [
+                                        "org_all11"
+                                    ]
+                                }
+                            ]
+                            ,
+                            "status": "Active"
+                        }
+
+                    ]
+
+                }
+  },
+  "account_multipleContext" :
+  {
+      "account":
+                {
+                    "accountId": "f16b0f4a333-multipleContext",
+                    "basicInfo": {
+                        "accountName": "amazon_account_test_asset_multipleContext",
+                        "serviceProviderType": "amazon",
+                        "serviceProviderCode": "amazon",
+                        "accountType": "subaccount",
+                        "isActive": "Active",
+                        "userType": "asset"
+                    },
+                    "advancedInfo": {
+                        "accountNumber": "amazon11158"
+                    },
+                    "credentials": [
+                        {
+                            "credentialName": "cred1",
+                            "crefId": "amazon-cref-001",
+                            "purpose": [
+                                "provisioning"
+                            ],
+                            "context": [
+                                {
+                                    "team": [
+                                        "CORE-X"
+                                    ]
+                                }
+                            ]
+                            ,
+                            "status": "Active"
+                        },
+                        {
+                            "credentialName": "cred2",
+                            "crefId": "amazon-cref-001",
+                            "purpose": [
+                                "provisioning"
+                            ],
+                            "context": [
+                                {
+                                    "org": [
+                                        "org_all"
+                                    ]
+                                }
+                            ]
+                            ,
+                            "status": "Active"
+                        }
+                    ]
+
+                }
+  },
+  "account_invalid_payload" :
+  {
+      "account":
+                {
+                    "basicInfo":{
+                     "accountName":"icd_test_account_invalid_payload",
+                     "serviceProviderType":"icd",
+                     "isActive":"Active",
+                     "accountType":"subaccount",
+                     "userType":"asset",
+                     "serviceProviderCode":"icd"
+                  },
+                  "advancedInfo":{
+                     "accountNumber":"789012"
+                  },
+                  "credentials":[
+
+                  ],
+                "accountId": "f16b0f4a-invalidAccount"
+
+                }
+            },
+            "swagger_post" :
+            {
+      "appName": "automation",
+      "service":{
+      "serviceName": "cb-credential-service_automation",
+      "swaggerData": {
+      	"swagger": "2.0",
+      "info": {
+     "description": "This is a Cred service to store secrets in vault",
+      "version": "1.0.0",
+      "title": "Account Service"
+      }
+     },
+     "swaggerType": "json"}
+            },
+    "swagger_put" :
+    {
+      "swaggerData": {
+   		"swagger": "2.0",
+   		"info": {
+   			"team": "CORE-B",
+   			"teamsize": "10",
+   			"country": "India"
+   		}
+      ,
+      "swaggerType": "json"
+   	}
+                      }
+                      ,
+              "swagger_post_invalidkeys" :
+              {
+             "appName": "automation",
+             "service":{
+             "serviceName": "cb-credential-service_invalidkey_automation",
+             "swaggerData": {
+             	"swagger/1.0": "2.0",
+             "info": {
+            "description/1.0": "This is a Cred service to store secrets in vault",
+             "version/1.0": "1.0.0",
+             "title/1.0": "Account Service"
+             }
+            },
+            "swaggerType": "json"}
+            }
+
+          }

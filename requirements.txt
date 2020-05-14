@@ -1,0 +1,8 @@
+simplejson==3.16.0
+validator.py==1.2.5
+Requests==2.22.0
+jsonschema==3.0.2
+junit-xml==1.8
+responses==0.10.6
+python-dateutil==2.8.1
+pybase64 ==1.0.1

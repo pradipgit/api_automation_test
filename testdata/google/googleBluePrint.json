@@ -1,0 +1,651 @@
+{
+   "serviceOfferingId":"CB_GCP_DEPMGR_COMPUTE_ENGINE_S00",
+   "serviceOfferingName":"Compute Engine",
+   "serviceOfferingDescription":"The Google Compute Engine is the same engine Google uses to run services like its search engine, maps, and mail. This Infrastructure as an Service (IaaS) allows users to build virtual machines based on images of their own systems.",
+   "serviceInventoryId":"",
+   "serviceInstanceName":"testgooglepkk890",
+   "orderType":"New",
+   "currency":"USD",
+   "price":"6.696",
+   "qty":"1",
+   "UOM":"SIZE1",
+   "teamId":"MYTEAM",
+   "userId":"cloud.brokertest@gmail.com",
+   "apiDocVersion":"v3",
+   "submittedBy":"cloud.brokertest@gmail.com",
+   "configuredTime":"2018-09-20T11:39:47.141Z",
+   "sequenceNumber":"1",
+   "provider":"Google",
+   "providerAccountRefId":"675939d8-0c43-4be9-93d3-32569c50d6ea",
+   "providerCredentialRefId":"879e1f16-4464-4b14-834f-46c86d5893a0",
+   "providerCode":"google",
+   "configInfo":[
+      {
+         "configGroup":"Configure Region",
+         "sectionCode":"",
+         "sectionName":"",
+         "config":[
+            {
+               "editable":true,
+               "configId":"region",
+               "isChanged":"false",
+               "name":"Region",
+               "description":"A region is a specific geographical location where you can run your resources. Each region has one or more zones",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"asia-east1",
+                     "value":"asia-east1",
+                     "valueId":"asia-east1",
+                     "binding":"$REGION$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"zone",
+               "isChanged":"false",
+               "name":"Zone",
+               "description":"The zone determines what computing resources are available and where your data is stored and used",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"asia-east1-a",
+                     "value":"asia-east1-a",
+                     "valueId":"asia-east1-a",
+                     "binding":"$ZONE$"
+                  }
+               ],
+               "uom":"SIZE1"
+            }
+         ]
+      },
+      {
+         "configGroup":"Configure Compute Engine",
+         "sectionCode":"",
+         "sectionName":"",
+         "config":[
+            {
+               "editable":true,
+               "configId":"instanceName",
+               "isChanged":"false",
+               "name":"Instance Name",
+               "description":"Name of VM Instance. It must must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"testpkkgoogle",
+                     "value":"testpkkgoogle",
+                     "valueId":"testpkkgoogle",
+                     "binding":"$INSTANCE_NAME$"
+                  }
+               ],
+               "uom":"SIZE1"
+            }
+         ]
+      },
+      {
+         "configGroup":"Configure Machine Type",
+         "sectionCode":"",
+         "sectionName":"",
+         "config":[
+            {
+               "editable":true,
+               "configId":"selectedMachine",
+               "isChanged":"false",
+               "name":"Machine Type Edit Option",
+               "description":"Create an instance with custom virtualized hardware settings. Specifically, you can create an instance with a custom number of vCPUs and amount of memory, effectively using a custom machine type.",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"Basic view",
+                     "value":"Basic view",
+                     "valueId":"Basic view",
+                     "binding":"$SELECTED_MACHINE$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"machineType",
+               "isChanged":"false",
+               "name":"Machine type",
+               "description":"select the machine type. Customize to select cores, memory and GPUs.",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"f1-micro",
+                     "value":"f1-micro",
+                     "valueId":"f1-micro",
+                     "binding":"$MACHINE_TYPE$"
+                  }
+               ],
+               "uom":"SIZE1"
+            }
+         ]
+      },
+      {
+         "configGroup":"Configure Container",
+         "sectionCode":"",
+         "sectionName":"",
+         "config":[
+            {
+               "editable":true,
+               "configId":"container_deployContainer",
+               "isChanged":"false",
+               "name":"Deploy Container",
+               "description":"You can deploy a container to this VM instance by using a container-optimized OS image",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"No",
+                     "value":"No",
+                     "valueId":"No",
+                     "binding":"$DEPLOY_CONTAINER$"
+                  }
+               ],
+               "uom":"SIZE1"
+            }
+         ]
+      },
+      {
+         "configGroup":"Configure Boot Disk",
+         "sectionCode":"",
+         "sectionName":"",
+         "config":[
+            {
+               "editable":true,
+               "configId":"bootDisk_sourceImageType",
+               "isChanged":"false",
+               "name":"Source Image Type",
+               "description":"Select an image or snapshot to create a boot disk; or attach an existing disk",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"OS Images",
+                     "value":"OS Images",
+                     "valueId":"OS Images",
+                     "binding":"$SOURCE_IMAGE_TYPE$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"bootDisk_OSImage",
+               "isChanged":"false",
+               "name":"OS Images",
+               "description":"Select an OS Image to create a boot disk",
+               "type":"string",
+               "values":[
+                  {
+                     "label":" CentOS  6 ( x86_64 built on 20180911)",
+                     "value":" CentOS  6 ( x86_64 built on 20180911)",
+                     "valueId":"projects/centos-cloud/global/images/centos-6-v20180911",
+                     "binding":"$BOOT_IMAGE_URL$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"bootDisk_diskType",
+               "isChanged":"false",
+               "name":"Boot Disk Type",
+               "description":"Storage space is much less expensive for a standard persistent disk. An SSD persistent disk is better for random IOPS or streaming throughput with low latency",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"pd-standard",
+                     "value":"pd-standard",
+                     "valueId":"pd-standard",
+                     "binding":"$BOOT_DISK_TYPE$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"bootDisk_sizeGb",
+               "isChanged":"false",
+               "name":"Boot Disk Size in GB",
+               "description":"Persistent disk performance is tied to the size of the persistent disk volume. You are charged for the actual amount of provisioned disk space",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"10",
+                     "value":"10",
+                     "valueId":"10",
+                     "binding":"$BOOT_DISK_SIZE$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"bootDisk_autoDelete",
+               "isChanged":"false",
+               "name":"Deletion Rule ?",
+               "description":"Delete boot disk when instance is deleted",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"Yes",
+                     "value":"Yes",
+                     "valueId":"Yes",
+                     "binding":"$BOOT_AUTO_DELETE$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"bootDisk_encryption",
+               "isChanged":"false",
+               "name":"Encryption",
+               "description":"Google automatically encrypts your data using its own key. If you supply a key, you must take care to store the key safely. Google cannot recover your data if you lose your key.",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"Automatic(recommended)",
+                     "value":"Automatic(recommended)",
+                     "valueId":"Automatic(recommended)",
+                     "binding":"$BOOTDISK_ENCRYPTION$"
+                  }
+               ],
+               "uom":"SIZE1"
+            }
+         ]
+      },
+      {
+         "configGroup":"Configure Disk",
+         "sectionCode":"",
+         "sectionName":"",
+         "config":[
+            {
+               "editable":true,
+               "configId":"disks_confirm",
+               "isChanged":"false",
+               "name":"Add Additional Disk",
+               "description":"Additional disks provide persistent and local ssd storage for the instance.",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"No",
+                     "value":"No",
+                     "valueId":"No",
+                     "binding":"$ADD_ADDITIONAL_DISK$"
+                  }
+               ],
+               "uom":"SIZE1"
+            }
+         ]
+      },
+      {
+         "configGroup":"Identity and API access",
+         "sectionCode":"",
+         "sectionName":"",
+         "config":[
+            {
+               "editable":true,
+               "configId":"iam_serviceAccountEmail",
+               "isChanged":"false",
+               "name":"Service account",
+               "description":"Applications running on the VM use the service account to call Google Cloud APIs. Use Permissions on the console menu to create a service account or use the default service account if available.",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"No service account",
+                     "value":"No service account",
+                     "valueId":"None",
+                     "binding":"$IAM_SERVICE_ACCOUNT$"
+                  }
+               ],
+               "uom":"SIZE1"
+            }
+         ]
+      },
+      {
+         "configGroup":"Configure Firewall",
+         "sectionCode":"",
+         "sectionName":"",
+         "config":[
+            {
+               "editable":true,
+               "configId":"firewall_enableHTTP",
+               "isChanged":"false",
+               "name":"Enable HTTP",
+               "description":"Enable HTTP access",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"No",
+                     "value":"No",
+                     "valueId":"No",
+                     "binding":"$ENABLE_HTTP$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"firewall_enableHTTPS",
+               "isChanged":"false",
+               "name":"Enable HTTPS",
+               "description":"Enable HTTPS access",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"No",
+                     "value":"No",
+                     "valueId":"No",
+                     "binding":"$ENABLE_HTTPS$"
+                  }
+               ],
+               "uom":"SIZE1"
+            }
+         ]
+      },
+      {
+         "configGroup":"Configure Network",
+         "sectionCode":"",
+         "sectionName":"",
+         "config":[
+            {
+               "editable":true,
+               "configId":"networkInterface_tags",
+               "isChanged":"false",
+               "name":"Network Tags",
+               "description":"The network determines what network traffic the instance can access. Tags must contain only lowercase letters, numbers, and hyphens, separated by comma.",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"",
+                     "value":"",
+                     "valueId":"",
+                     "binding":"$TAGS$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"networkInterface_networkSelect",
+               "isChanged":"false",
+               "name":"Network Interface?",
+               "description":"Network selection",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"No",
+                     "value":"No",
+                     "valueId":"No",
+                     "binding":"$NETWORK_SELECT$"
+                  }
+               ],
+               "uom":"SIZE1"
+            }
+         ]
+      },
+      {
+         "configGroup":"Configure SSH",
+         "sectionCode":"",
+         "sectionName":"",
+         "config":[
+            {
+               "editable":true,
+               "configId":"ssh_blockProjectWideSSH",
+               "isChanged":"false",
+               "name":"Block project wide SSH keys",
+               "description":"When checked, project-wide SSH keys cannot access this instance",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"No",
+                     "value":"No",
+                     "valueId":"No",
+                     "binding":"$BLOCK_PROJECT_WIDE_SSH$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"ssh_addSSH",
+               "isChanged":"false",
+               "name":"Add Public SSH Key",
+               "description":"Adding instance-level public SSH keys",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"No",
+                     "value":"No",
+                     "valueId":"No",
+                     "binding":"$ADD_SSH$"
+                  }
+               ],
+               "uom":"SIZE1"
+            }
+         ]
+      },
+      {
+         "configGroup":"Configure Management",
+         "sectionCode":"",
+         "sectionName":"",
+         "config":[
+            {
+               "editable":true,
+               "configId":"management_description",
+               "isChanged":"false",
+               "name":"Description",
+               "description":"",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"",
+                     "value":"",
+                     "valueId":"",
+                     "binding":"$MANAGEMENT_DESCRIPTION$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"management_labelsItem",
+               "isChanged":"false",
+               "name":"Labels Value",
+               "description":"To organize your project, add arbitrary labels as key/value pairs to your resources. Use colon to separate the key and value. i.e. key1:value1",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"",
+                     "value":"",
+                     "valueId":"",
+                     "binding":"$MANAGEMENT_LABELS_ITEMS$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"management_enableDelProtection",
+               "isChanged":"false",
+               "name":"Enable deletion protection",
+               "description":"When deletion protection is enabled, instance cannot be deleted.",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"False",
+                     "value":"False",
+                     "valueId":"False",
+                     "binding":"$MANAGEMENT_ENABLE_DEL_PROTECTION$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"management_startup_script",
+               "isChanged":"false",
+               "name":"Automation Startup script",
+               "description":"You can choose to specify a startup script that will run when your instance boots up or restarts. Startup scripts can be used to install software and updates, and to ensure that services are running within the virtual machine.",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"",
+                     "value":"",
+                     "valueId":"",
+                     "binding":"$MANAGEMENT_STARTUP_SCRIPT$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"management_metadata_items",
+               "isChanged":"false",
+               "name":"Metadata",
+               "description":"You can set custom metadata for an instance or project outside of the server-defined metadata. This is useful for passing in arbitrary values to your project or instance that can be queried by your code on the instance. Use colon to seperate the key and value. i.e. key1:value1",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"",
+                     "value":"",
+                     "valueId":"",
+                     "binding":"$MANAGEMENT_METADATA_ITEMS$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"management_preemptibility",
+               "isChanged":"false",
+               "name":"Availability policy Preemptibility",
+               "description":"A preemptible VM costs much less, but lasts only 24 hours. It can be terminated sooner due to system demands.",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"Keep Off(recommended)",
+                     "value":"Keep Off(recommended)",
+                     "valueId":"Keep Off(recommended)",
+                     "binding":"$MANAGEMENT_PREEMPTIBILITY$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"management_automaticRestart",
+               "isChanged":"false",
+               "name":"Automatic restart",
+               "description":"Compute Engine can automatically restart VM instances if they are terminated for non-user-initiated reasons (maintenance event, hardware failure, software failure, etc.)",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"Keep On(recommended)",
+                     "value":"Keep On(recommended)",
+                     "valueId":"Keep On(recommended)",
+                     "binding":"$MANAGEMENT_AUTOMATIC_RESTART$"
+                  }
+               ],
+               "uom":"SIZE1"
+            },
+            {
+               "editable":true,
+               "configId":"management_onHostMaintenance",
+               "isChanged":"false",
+               "name":"On host maintenance",
+               "description":"When Compute Engine performs periodic infrastructure maintenance it can migrate your VM instances to other hardware without downtime",
+               "type":"string",
+               "values":[
+                  {
+                     "label":"Migrate VM instance (recommended)",
+                     "value":"Migrate VM instance (recommended)",
+                     "valueId":"Migrate VM instance (recommended)",
+                     "binding":"$MANAGEMENT_ON_HOST_MAINTENANCE$"
+                  }
+               ],
+               "uom":"SIZE1"
+            }
+         ]
+      }
+   ],
+   "prices":[
+      {
+         "quantity":1,
+         "oneTimeCharge":0,
+         "description":"Micro instance with burstable CPU running in APAC",
+         "recurringCharge":{
+            "value":0.009,
+            "frequency":{
+               "value":1,
+               "code":"HR"
+            }
+         },
+         "usageCharge":{
+            "uom":{
+               "value":null,
+               "code":null
+            },
+            "frequency":{
+               "value":null,
+               "code":null
+            },
+            "value":null
+         },
+         "nonOneTimeCharge":6.696,
+         "linkId":"E3EE-02EB-33B4",
+         "lineItemTotal":6.696
+      }
+   ],
+   "context":[
+      {
+         "name":"Environment",
+         "values":[
+            "PRODTOI"
+         ],
+         "tagType":"env"
+      },
+      {
+         "name":"Organization",
+         "values":[
+            "org1"
+         ],
+         "tagType":"org"
+      }
+   ],
+   "orderItemTotal":[
+      {
+         "quantity":1,
+         "oneTimeCharge":0,
+         "description":"Micro instance with burstable CPU running in APAC",
+         "recurringCharge":{
+            "value":0.009,
+            "frequency":{
+               "value":1,
+               "code":"HR"
+            }
+         },
+         "usageCharge":{
+            "uom":{
+               "value":null,
+               "code":null
+            },
+            "frequency":{
+               "value":null,
+               "code":null
+            },
+            "value":null
+         },
+         "nonOneTimeCharge":6.696,
+         "linkId":"E3EE-02EB-33B4",
+         "lineItemTotal":6.696
+      }
+   ],
+   "environmentId":"PRODTOI",
+   "organizationId":"org1"
+}

@@ -1,0 +1,160 @@
+{
+    "new_validation_result": {
+        "status": {
+            "message": "Validation success",
+            "translateCode": "CO200_VALIDATION_SUCCESS",
+            "statusCode": 200,
+            "translateParameters": []
+        },
+        "validation_results": {
+            "failed": [
+                {
+                    "name": "validation_name_1",
+                    "reason": {
+                        "section": "basicInfo",
+                        "message": "Something went wrong with account validation",
+                        "translateCode": "ACCOUNT_VALIDATION_ERR_001",
+                        "translateParameters": []
+                    }
+                }
+            ],
+            "passed": [],
+            "unknown": [
+                {
+                    "name": "validation_name_7",
+                    "reason": {
+                        "message": "The validation could not performed due to unknown reasons",
+                        "translateCode": "ACCOUNT_VALIDATION_UNKNOWN_001",
+                        "translateParameters": []
+                    }
+                }
+            ],
+            "validation_count": {
+                "passed": 0,
+                "failed": 1,
+                "unknown": 1,
+                "total": 2
+            }
+        }
+    },
+    "get_val_res_by_id": [
+        {
+            "_id": "5d0b35c80cd31a0006c81329",
+            "validationresult": {
+                "failed": [
+                    {
+                        "name": "validation_name_1",
+                        "reason": {
+                            "section": "basicInfo",
+                            "message": "Something went wrong with account validation",
+                            "translateCode": "ACCOUNT_VALIDATION_ERR_001",
+                            "translateParameters": []
+                        }
+                    }
+                ],
+                "passed": [],
+                "unknown": [
+                    {
+                        "name": "validation_name_7",
+                        "reason": {
+                            "message": "The validation could not performed due to unknown reasons",
+                            "translateCode": "ACCOUNT_VALIDATION_UNKNOWN_001",
+                            "translateParameters": []
+                        }
+                    }
+                ],
+                "validation_count": {
+                    "passed": 0,
+                    "failed": 1,
+                    "unknown": 1,
+                    "total": 2
+                }
+            },
+            "valResId": "2d104102-da97-469f-830c-5512e22aaa04",
+            "lifeCycle": {
+                "created_by": "priyde22@in.ibm.com",
+                "created_on": 1561015752851,
+                "updated_by": "priyde22@in.ibm.com",
+                "updated_on": 1561015752851
+            },
+            "version": 2,
+            "type": "validation_result"
+        }
+    ],
+    "invalid_get_val_res_by_id": {
+        "message": "Get validationResultById Failed, Unable to find the validation result document with id: wrongId",
+        "statusCode": 404,
+        "translateCode": "CO404_GET_VALRESBYID_FAILED",
+        "translateParameters": [
+            "wrongId"
+        ]
+    },
+    "cred_val_Result_success": {
+        "validation_results": {
+            "failed": [
+                {
+                    "name": "validation_name_1",
+                    "reason": {
+                        "section": "connection_status",
+                        "message": "Something went wrong with account validation",
+                        "translateCode": "ACCOUNT_VALIDATION_ERR_001",
+                        "translateParameters": []
+                    }
+                }
+            ],
+            "passed": [],
+            "unknown": [
+                {
+                    "name": "validation_name_7",
+                    "reason": {
+                        "message": "The validation could not performed due to unknown reasons",
+                        "translateCode": "ACCOUNT_VALIDATION_UNKNOWN_001",
+                        "translateParameters": []
+                    }
+                }
+            ],
+            "validation_count": {
+                "passed": 0,
+                "failed": 1,
+                "unknown": 1,
+                "total": 2
+            }
+        }
+    },
+    "invalid_get_val_res_by_credid": {
+        "message": "Get validationResultByCredId Failed, Unable to find the validation result document with id: wrongId",
+        "statusCode": 404,
+        "translateCode": "CO404_GET_VALRESBYID_FAILED",
+        "translateParameters": [
+            "wrongId"
+        ]
+    },
+    "invalid_get_val_count_by_id": {
+        "message": "Get validationCountByIdService Failed, Unable to find the validation result document with id: wrongId",
+        "statusCode": 404,
+        "translateCode": "CO404_GET_VALRESBYID_FAILED",
+        "translateParameters": [
+            "wrongId"
+        ]
+    },
+    "get_val_count_by_id": {
+        "passed": 0,
+        "failed": 1,
+        "unknown": 1,
+        "total": 2
+    },
+    "invalid_get_val_count_by_credid": {
+        "message": "Get validationCountByCredIdService Failed, Unable to find the validation result document with id: wrongId",
+        "statusCode": 404,
+        "translateCode": "CO404_GET_VALRESBYID_FAILED",
+        "translateParameters": [
+            "wrongId"
+        ]
+    },
+    "get_validation_count_by_credid": {
+        "passed": 0,
+        "failed": 1,
+        "unknown": 1,
+        "total": 2
+    }
+}

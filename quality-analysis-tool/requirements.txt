@@ -1,0 +1,8 @@
+simplejson==3.15.0
+pandas==0.23.1
+validator.py==1.2.5
+Requests==2.19.1
+XlsxWriter==1.0.7
+configparser==3.5.0
+jinja2>=2.6
+six>=1.4.1
